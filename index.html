@@ -4,18 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Düsseldorf + Cologne Christmas weekend, 28-29 November 2026</title>
+<meta name="description" content="Confirmed: four friends, one car, Düsseldorf on Saturday and Cologne's Christmas markets on Sunday, 28-29 November 2026.">
+<meta name="theme-color" content="#B3122E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,500..900&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var r = document.documentElement;
+  r.classList.add('js');
+  try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') r.dataset.theme = t; } catch(e){}
+})();
+</script>
 <style>
+/* Layout: a festive advent storybook. Red poster hero under a market-stall awning, cream pages,
+   red and pine "bands" with scalloped awning edges, and food and drink characters peeking in at the seams. */
 :root{
-  --bg:#EAF1F0; --surface:#F8FBFA; --surface-2:#DCE7E5;
-  --ink:#10302A; --ink-soft:#3D5A54; --line:#B9CCC8;
-  --wine:#8E1B2E; --wine-ink:#FFF6F2; --gold:#A8781F; --gold-glow:#E8B84F;
-  --pine:#1F5246; --frost:#7FA3AE;
-  --sky-top:#C9DCE0; --sky-bottom:#EAF1F0; --dom:#2A4A43; --window:#E8B84F;
-  --snow:rgba(255,255,255,.95); --snow-shadow:rgba(16,48,42,.18);
-  --shadow:0 1px 0 rgba(16,48,42,.06), 0 12px 30px -18px rgba(16,48,42,.45);
+  --bg:#FFF6EC; --bg-dot:rgba(179,18,46,.07);
+  --surface:#FFFFFF; --surface-2:#FBE7DA;
+  --ink:#2B0B12; --ink-soft:#6E3B40; --line:#EBCDBE;
+  --red:#B3122E; --red-fill:#C8102E; --on-red:#FFF4E2;
+  --gold:#8A5A00; --gold-fill:#F2C14E;
+  --pine:#1B6A45; --pine-fill:#1E5A3E;
+  --band:#B3122E; --band-2:#8C0D23; --band-ink:#FFF4E2;
+  --pine-band:#1E5A3E; --pine-band-2:#143F2B;
+  --hero-a:#E0233F; --hero-b:#8E0B22; --city:#5C0616; --city-2:#78091D; --window:#FFD36B;
+  --h2-shadow:#F2C14E;
+  --ok-bg:#DDF1E5; --warn-bg:#FCEFC8;
+  --outline:#3B0A10;
+  --shadow:0 2px 0 rgba(43,11,18,.05), 0 18px 36px -20px rgba(120,9,29,.45);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-hand:"Caveat","Comic Sans MS","Segoe Print",cursive;
+  --gutter:16px;
   color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -23,183 +44,657 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0C1B22; --surface:#12262E; --surface-2:#1A323B;
-    --ink:#EFE7D6; --ink-soft:#AFC0BE; --line:#2C4851;
-    --wine:#D2475B; --wine-ink:#1A0B0E; --gold:#E2B556; --gold-glow:#FFD37A;
-    --pine:#5FA48F; --frost:#7FA3AE;
-    --sky-top:#06121A; --sky-bottom:#0C1B22; --dom:#1B333A; --window:#FFC861;
-    --snow:rgba(255,255,255,.9); --snow-shadow:rgba(0,0,0,0);
-    --shadow:0 1px 0 rgba(255,255,255,.04), 0 18px 40px -20px rgba(0,0,0,.8);
+    --bg:#160509; --bg-dot:rgba(242,193,78,.06);
+    --surface:#240A10; --surface-2:#331219;
+    --ink:#FCEFE4; --ink-soft:#DDBDB3; --line:#4D1D26;
+    --red:#FF6B7D; --red-fill:#C8102E; --on-red:#FFF4E2;
+    --gold:#F5C451; --gold-fill:#F2C14E;
+    --pine:#62CF9B; --pine-fill:#1E6B48;
+    --band:#7A0C1E; --band-2:#4E0712; --band-ink:#FFF4E2;
+    --pine-band:#123A28; --pine-band-2:#0B2619;
+    --hero-a:#8C1028; --hero-b:#2A050B; --city:#120205; --city-2:#1E0409; --window:#FFC861;
+    --h2-shadow:#5E0B19;
+    --ok-bg:#163A2A; --warn-bg:#3E2E0E;
+    --shadow:0 1px 0 rgba(255,255,255,.04), 0 20px 40px -20px rgba(0,0,0,.85);
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0C1B22; --surface:#12262E; --surface-2:#1A323B;
-  --ink:#EFE7D6; --ink-soft:#AFC0BE; --line:#2C4851;
-  --wine:#D2475B; --wine-ink:#1A0B0E; --gold:#E2B556; --gold-glow:#FFD37A;
-  --pine:#5FA48F; --frost:#7FA3AE;
-  --sky-top:#06121A; --sky-bottom:#0C1B22; --dom:#1B333A; --window:#FFC861;
-  --snow:rgba(255,255,255,.9); --snow-shadow:rgba(0,0,0,0);
-  --shadow:0 1px 0 rgba(255,255,255,.04), 0 18px 40px -20px rgba(0,0,0,.8);
+  --bg:#160509; --bg-dot:rgba(242,193,78,.06);
+  --surface:#240A10; --surface-2:#331219;
+  --ink:#FCEFE4; --ink-soft:#DDBDB3; --line:#4D1D26;
+  --red:#FF6B7D; --red-fill:#C8102E; --on-red:#FFF4E2;
+  --gold:#F5C451; --gold-fill:#F2C14E;
+  --pine:#62CF9B; --pine-fill:#1E6B48;
+  --band:#7A0C1E; --band-2:#4E0712; --band-ink:#FFF4E2;
+  --pine-band:#123A28; --pine-band-2:#0B2619;
+  --hero-a:#8C1028; --hero-b:#2A050B; --city:#120205; --city-2:#1E0409; --window:#FFC861;
+  --h2-shadow:#5E0B19;
+  --ok-bg:#163A2A; --warn-bg:#3E2E0E;
+  --shadow:0 1px 0 rgba(255,255,255,.04), 0 20px 40px -20px rgba(0,0,0,.85);
   color-scheme:dark;
 }
-html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-img,svg{max-width:100%}
-a{color:var(--wine);text-underline-offset:3px;text-decoration-thickness:1px}
-a:hover{text-decoration-thickness:2px}
-:focus-visible{outline:3px solid var(--gold-glow);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:"Young Serif",Georgia,"Times New Roman",serif;font-weight:400;line-height:1.1;margin:0}
-h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:.4em}
-h3{font-size:1.35rem;margin-bottom:.3em}
-p{margin:.5em 0}
-.wrap{width:min(100% - 2.5rem,68rem);margin-inline:auto}
-.narrow{max-width:42rem}
-section{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line)}
-.lead{font-size:1.2rem;color:var(--ink-soft)}
-small,.muted{color:var(--ink-soft)}
 
-/* top bar with garland progress */
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar-in{display:flex;align-items:center;gap:1rem;height:56px}
-.brand{font-family:"Young Serif",Georgia,serif;font-size:1.05rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);background-image:radial-gradient(var(--bg-dot) 1.2px,transparent 1.6px);background-size:22px 22px;color:var(--ink);font:400 1.0625rem/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.page{overflow-x:hidden}
+@supports (overflow-x:clip){.page{overflow-x:clip}}
+img,svg{max-width:100%}
+a{color:var(--red);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--gold-fill);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(2.2rem,7vw,3.7rem);font-weight:900;letter-spacing:-.015em;color:var(--red);text-shadow:3px 3px 0 var(--h2-shadow);margin-bottom:.35em}
+h3{font-size:1.4rem;margin-bottom:.3em}
+p{margin:.5em 0}
+.wrap{width:100%;max-width:calc(68rem + 32px);margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.narrow{max-width:42rem}
+.wrap.narrow{max-width:calc(44rem + 32px)}
+section{position:relative;padding-block:clamp(4.5rem,9vw,7rem)}
+.lead{font-size:1.18rem;color:var(--ink-soft)}
+small,.muted{color:var(--ink-soft)}
+.kicker{font-family:var(--f-hand);font-size:1.55rem;font-weight:700;color:var(--gold);margin:0 0 .1rem;display:flex;align-items:center;gap:.5rem;line-height:1.1}
+.kicker svg{width:20px;height:20px;flex:none}
+
+/* ===== top bar with garland progress ===== */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:25;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:1rem;height:58px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:1.05rem;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:.5rem;min-width:0}
+.brand .tick{flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--pine-fill);color:#fff}
+.brand .tick svg{width:13px;height:13px}
 .nav{display:flex;gap:1.1rem;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
-.nav a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;white-space:nowrap}
+.nav a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500;white-space:nowrap;position:relative;padding:.2rem 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .nav a:hover{color:var(--ink)}
-.theme{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.nav a:hover::after,.nav a.cur::after{transform:scaleX(1)}
+.nav a.cur{color:var(--ink)}
+.theme{flex:none;margin-left:auto;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.nav + .theme{margin-left:0}
+.theme:hover{transform:rotate(25deg) scale(1.06)}
 .theme svg{width:20px;height:20px}
 .theme .moon{display:none}
 :root[data-theme="dark"] .theme .sun{display:none}
 :root[data-theme="dark"] .theme .moon{display:block}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme .sun{display:none}:root:not([data-theme="light"]) .theme .moon{display:block}}
-.garland{position:absolute;left:0;right:0;bottom:-7px;height:14px;pointer-events:none}
-.garland svg{display:block;width:100%;height:14px}
-.garland .wire{stroke:var(--pine);stroke-width:1.2;fill:none;opacity:.7}
-.garland .bulb{fill:var(--line);transition:fill .3s}
-.garland .bulb.on{fill:var(--gold-glow);filter:drop-shadow(0 0 4px var(--gold-glow))}
-.garland .bulb.on.r{fill:var(--wine);filter:drop-shadow(0 0 4px var(--wine))}
-@media (max-width:760px){.nav{display:none}}
+.garland{position:absolute;left:0;right:0;bottom:-8px;height:16px;pointer-events:none}
+.garland svg{display:block;width:100%;height:16px}
+.garland .wire{stroke:var(--pine);stroke-width:1.3;fill:none;opacity:.75}
+.garland .bulb{fill:var(--line);transition:fill .35s}
+.garland .bulb.on{fill:var(--gold-fill);filter:drop-shadow(0 0 4px var(--gold-fill))}
+.garland .bulb.on.r{fill:var(--red-fill);filter:drop-shadow(0 0 4px var(--red-fill))}
+.garland .bulb.on.g{fill:#2FA36B;filter:drop-shadow(0 0 4px #2FA36B)}
+@media (max-width:860px){.nav{display:none}}
 
-/* hero */
-.hero{position:relative;min-height:min(92svh,820px);display:grid;align-items:end;overflow:hidden;background:linear-gradient(180deg,var(--sky-top),var(--sky-bottom) 85%);border-top:0;padding:0}
-#snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;max-height:64%}
-.skyline .b{fill:var(--dom)}
-.skyline .w{fill:var(--window);opacity:.9}
+/* ===== hero ===== */
+.hero{position:relative;overflow:hidden;padding:0;color:var(--on-red);background:radial-gradient(120% 80% at 50% 30%,var(--hero-a),var(--hero-b) 75%)}
+.rays{position:absolute;left:50%;top:38%;width:220vmax;height:220vmax;margin:-110vmax 0 0 -110vmax;background:repeating-conic-gradient(from 0deg,rgba(255,214,140,.09) 0 5deg,transparent 5deg 12deg);-webkit-mask:radial-gradient(circle,#000 0,transparent 45%);mask:radial-gradient(circle,#000 0,transparent 45%);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.rays{animation:spin 140s linear infinite}.hero.off .rays{animation-play-state:paused}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.awning{position:absolute;left:0;right:0;top:0;height:40px;z-index:3;background:repeating-linear-gradient(90deg,#FFF4E2 0 28px,#7A0A1C 28px 56px);-webkit-mask:radial-gradient(circle at 14px 0,#000 14px,transparent 14.5px) 0 100%/28px 14px repeat-x,linear-gradient(#000,#000) 0 0/100% calc(100% - 13px) no-repeat;mask:radial-gradient(circle at 14px 0,#000 14px,transparent 14.5px) 0 100%/28px 14px repeat-x,linear-gradient(#000,#000) 0 0/100% calc(100% - 13px) no-repeat;filter:drop-shadow(0 4px 0 rgba(0,0,0,.18))}
+.awning-shade{position:absolute;left:0;right:0;top:0;height:46px;z-index:2;background:linear-gradient(rgba(0,0,0,.28),transparent);pointer-events:none}
+#heroLights{position:absolute;left:0;right:0;top:34px;width:100%;height:56px;z-index:3;pointer-events:none;overflow:visible}
+#heroLights .wire{fill:none;stroke:#2A0A0E;stroke-width:1.6}
+#heroLights .cap{fill:#2A0A0E}
+.lb{transform-box:fill-box;transform-origin:center top}
+@media (prefers-reduced-motion:no-preference){.lb{animation:glow 2.8s ease-in-out infinite}.hero.off .lb{animation-play-state:paused}}
+@keyframes glow{0%,100%{opacity:1}50%{opacity:.45}}
+#snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.skyline{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(210px,32vw,440px);z-index:1;pointer-events:none}
+.skyline .fr-dark{fill:var(--city)}
+.skyline .fr-roof{fill:#5A0715}
+.skyline .fr-awn{fill:#E0233F}
+.skyline .fr-snow,.skyline .fr-drift{fill:#FFF4E2}
+.skyline .fr-tree{fill:#124634}
+.skyline .fr-tree2{fill:#1D6B50}
+.skyline .fl{transform-box:fill-box;transform-origin:center}
+.skyline .star{fill:#FFD36B}
+.skyline .star-glow{fill:url(#g-starglow);transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:no-preference){
+  .skyline .fl{animation:tw var(--t,2s) ease-in-out var(--dl,0s) infinite alternate}
+  .skyline .star-glow{animation:halo 2.4s ease-in-out infinite}
+  .skyline .star{animation:spin 16s linear infinite;transform-box:fill-box;transform-origin:center}
+  .hero.off .skyline .fl,.hero.off .skyline .star-glow,.hero.off .skyline .star{animation-play-state:paused}
+}
+@keyframes halo{0%,100%{transform:scale(.8);opacity:.6}50%{transform:scale(1.25);opacity:1}}
+/* baubles hanging on gold strings under the awning */
+.baubles{position:absolute;top:26px;left:0;right:0;height:0;z-index:3;pointer-events:none}
+.bb{position:absolute;top:0;left:var(--x);width:2px;height:var(--len);background:linear-gradient(#FFD36B,#B8862B);transform-origin:50% 0}
+.bb::before{content:"";position:absolute;left:50%;top:100%;width:10px;height:7px;margin-left:-5px;border-radius:2px 2px 0 0;background:#D9A441}
+.bb::after{content:"";position:absolute;left:50%;top:calc(100% + 6px);width:var(--sz,30px);height:var(--sz,30px);margin-left:calc(var(--sz,30px) / -2);border-radius:50%;
+  background:radial-gradient(circle at 34% 30%,rgba(255,255,255,.9) 0 7%,transparent 18%),radial-gradient(circle at 40% 40%,var(--c),color-mix(in srgb,var(--c) 55%,#000) 100%);box-shadow:0 0 18px -2px var(--c)}
+@media (prefers-reduced-motion:no-preference){.bb{animation:swing var(--sw,3.6s) ease-in-out var(--dl,0s) infinite alternate}.hero.off .bb{animation-play-state:paused}}
+@keyframes swing{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+@media (max-width:759px){.bb.hide-s{display:none}}
+@media (min-width:760px){.bb.only-s{display:none}}
+.skyline .b{fill:var(--city)}
+.skyline .b2{fill:var(--city-2)}
+.skyline .w{fill:var(--window);opacity:.92}
 .skyline .w.t{animation:twinkle 4s ease-in-out infinite}
 .skyline .w.t2{animation:twinkle 5.5s ease-in-out 1.2s infinite}
+.skyline .snowcap{fill:#FFF4E2;opacity:.9}
 @keyframes twinkle{0%,100%{opacity:.95}50%{opacity:.35}}
-.hero-copy{position:relative;z-index:2;padding:7rem 0 clamp(14rem,34vw,22rem)}
-.hero h1{font-size:clamp(3rem,10vw,7.4rem);letter-spacing:-.02em;line-height:.92;max-width:11ch}
-.hero h1 span{display:block}
-.hero .date{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.4rem;padding:.55rem 1rem;border-radius:999px;background:var(--wine);color:var(--wine-ink);font-weight:500}
-.hero .date svg{width:18px;height:18px}
-.hero p.lead{max-width:34rem;margin-top:1rem;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.skyline .w.t,.skyline .w.t2{animation:none}}
+.hero-copy{position:relative;z-index:4;padding-top:4.9rem;padding-bottom:clamp(13.5rem,32vw,24rem)}
+@media (min-width:760px){.hero-copy{padding-top:6.4rem}}
+.stamp{display:block;width:100px;height:100px;margin:0 -4px -1.9rem auto;color:var(--gold-fill);transform:rotate(-12deg);position:relative;z-index:1}
+.stamp svg{width:100%;height:100%;overflow:visible}
+.stamp .ring{transform-origin:60px 60px}
+@media (min-width:760px){.stamp{position:absolute;right:max(var(--gutter),env(safe-area-inset-right,0px));top:6.5rem;width:170px;height:170px;margin:0}}
 @media (prefers-reduced-motion:no-preference){
-  .hero h1 span{animation:drop .9s cubic-bezier(.2,.8,.2,1) both}
-  .hero h1 span:nth-child(2){animation-delay:.12s}
-  .hero h1 span:nth-child(3){animation-delay:.24s}
-  @keyframes drop{from{opacity:0;transform:translateY(-.35em);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+  .stamp{animation:thump .7s cubic-bezier(.3,1.5,.5,1) .35s both}
+  .stamp .ring{animation:spin 24s linear infinite}
+  .hero.off .stamp .ring{animation-play-state:paused}
+}
+@keyframes thump{from{opacity:0;transform:scale(2.4) rotate(-40deg)}to{opacity:1;transform:scale(1) rotate(-12deg)}}
+.hero h1{font-size:clamp(3rem,13vw,8rem);font-weight:900;letter-spacing:-.025em;line-height:.9;max-width:11ch;color:var(--on-red);text-shadow:4px 4px 0 #F2C14E,8px 8px 0 rgba(42,5,11,.35)}
+.hero h1 span{display:block}
+.hero h1 em{font-style:italic;font-weight:700;color:#FFD36B;text-shadow:4px 4px 0 rgba(42,5,11,.45)}
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 span{animation:drop .9s cubic-bezier(.2,1.3,.3,1) both}
+  .hero h1 span:nth-child(2){animation-delay:.14s}
+  .hero h1 span:nth-child(3){animation-delay:.28s}
+  @keyframes drop{from{opacity:0;transform:translateY(-.5em) rotate(-4deg)}to{opacity:1;transform:none}}
   @supports (animation-timeline:scroll()){
     .skyline{animation:sink linear both;animation-timeline:scroll(root);animation-range:0 90vh}
-    @keyframes sink{to{transform:translateY(12%)}}
+    @keyframes sink{to{transform:translateY(14%)}}
   }
 }
+.hero-meta{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1.6rem}
+.date{display:inline-flex;align-items:center;gap:.55rem;padding:.6rem 1rem;border-radius:999px;background:#FFF4E2;color:#8C0D23;font-weight:700;box-shadow:0 4px 0 rgba(42,5,11,.35)}
+.date svg{width:18px;height:18px;flex:none}
+.happening{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem .95rem;border-radius:999px;background:#1E5A3E;color:#FFF4E2;font-weight:700;font-size:.95rem;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.happening i{width:9px;height:9px;border-radius:50%;background:#7CF0A9;box-shadow:0 0 0 0 rgba(124,240,169,.7)}
+@media (prefers-reduced-motion:no-preference){.happening i{animation:pulse 1.8s ease-out infinite}}
+@keyframes pulse{to{box-shadow:0 0 0 10px rgba(124,240,169,0)}}
+.hero p.lead{max-width:34rem;margin-top:1.1rem;color:#FFE9D8;font-size:1.15rem}
+.countdown{margin-top:1.4rem}
+.cd-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.cd{min-width:4.3rem;padding:.55rem .5rem .45rem;border-radius:14px;background:rgba(42,5,11,.32);border:1px solid rgba(255,214,140,.35);text-align:center;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.cd b{display:block;font-family:var(--f-display);font-weight:900;font-size:1.9rem;line-height:1;color:#FFD36B;font-variant-numeric:tabular-nums}
+.cd span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#FFE9D8}
+.cd.bump b{animation:bump .35s ease}
+@keyframes bump{40%{transform:translateY(-3px) scale(1.08)}}
+.cd-label{margin:.5rem 0 0;font-family:var(--f-hand);font-size:1.35rem;color:#FFE9D8}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.6rem 1.3rem;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;background:#F2C14E;color:#5A0715;border:2px solid #F2C14E;box-shadow:0 5px 0 #7A0A1C,0 12px 26px -10px rgba(242,193,78,.8);transition:transform .25s cubic-bezier(.3,1.6,.5,1),box-shadow .25s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #7A0A1C}
+.btn.ghost{background:rgba(42,5,11,.25);color:#FFF4E2;border-color:rgba(255,244,226,.6);box-shadow:0 5px 0 rgba(42,5,11,.45)}
+.btn.ghost:hover{background:rgba(42,5,11,.4)}
+.hero .btn:focus-visible{outline-color:#FFF4E2}
+@media (prefers-reduced-motion:no-preference){.cta .btn{animation:drop .8s cubic-bezier(.2,1.3,.3,1) .5s both}.cta .btn + .btn{animation-delay:.62s}}
+.hero-critter{position:absolute;bottom:3%;z-index:2;width:clamp(78px,11vw,140px);--play:running}
+.hero-critter.l{left:max(4px,env(safe-area-inset-left,0px))}
+.hero-critter.r{right:max(4px,env(safe-area-inset-right,0px));width:clamp(104px,15vw,190px)}
+.hero.off .hero-critter{--play:paused}
+@media (prefers-reduced-motion:no-preference){
+  .hero-critter{animation:rise 1s cubic-bezier(.3,1.5,.5,1) 1.2s both}
+  .hero-critter.r{animation-delay:1.45s}
+}
+@keyframes rise{from{transform:translateY(130%) rotate(-20deg)}to{transform:none}}
 
-/* crew */
-.crew{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:1.5rem}
-.crew div{background:var(--surface);padding:1.1rem 1.2rem}
-.crew b{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:1.3rem;display:block}
-.crew .age{color:var(--gold);font-weight:500;font-size:.9rem}
-.crew p{margin:.3rem 0 0;font-size:.95rem;color:var(--ink-soft)}
+/* ===== ticker ===== */
+.ticker{position:relative;z-index:5;background:var(--gold-fill);color:#5A0715;border-block:3px solid #7A0A1C;overflow:hidden;padding:0;transform:rotate(-1.2deg);margin:-14px -10px 0;box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
+.ticker-track{display:flex;width:max-content}
+.ticker-track span{display:inline-flex;align-items:center;gap:1.1rem;padding:.55rem .55rem .55rem 0;font-family:var(--f-display);font-weight:900;font-size:1.15rem;white-space:nowrap;letter-spacing:.01em}
+.ticker-track span::after{content:"";width:14px;height:14px;background:#B3122E;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+@media (prefers-reduced-motion:no-preference){.ticker-track{animation:marquee 38s linear infinite}.ticker.off .ticker-track{animation-play-state:paused}}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
-/* advent doors */
-.doors{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
-@media (max-width:820px){.doors{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:440px){.doors{grid-template-columns:1fr}}
-.door{position:relative;perspective:1200px;min-height:15.5rem}
-.door-back{position:absolute;inset:0;border-radius:14px;background:var(--surface);border:1px solid var(--line);padding:1.1rem;display:flex;flex-direction:column;gap:.4rem;box-shadow:var(--shadow)}
-.door.best .door-back{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--shadow)}
-.door-back .verdict{font-family:"Young Serif",Georgia,serif;font-size:1.25rem;line-height:1.15}
-.door.best .door-back .verdict{color:var(--wine)}
-.door-back p{font-size:.92rem;margin:0;color:var(--ink-soft)}
-.door-front{position:absolute;inset:0;z-index:2;border:0;border-radius:14px;cursor:pointer;transform-origin:left center;transition:transform .9s cubic-bezier(.3,.7,.2,1),box-shadow .9s;background:var(--wine);color:var(--wine-ink);display:flex;flex-direction:column;justify-content:space-between;padding:1.1rem;text-align:left;font:inherit;box-shadow:var(--shadow);
-  background-image:radial-gradient(circle at 20% 15%,rgba(255,255,255,.18) 0 1.5px,transparent 2px),radial-gradient(circle at 70% 40%,rgba(255,255,255,.14) 0 1px,transparent 1.5px),radial-gradient(circle at 40% 80%,rgba(255,255,255,.16) 0 1.5px,transparent 2px);background-size:46px 46px,38px 38px,52px 52px}
-.door:nth-child(2n) .door-front{background-color:var(--pine)}
-.door-front .num{font-family:"Young Serif",Georgia,serif;font-size:3.2rem;line-height:1}
-.door-front .hint{font-size:.85rem;opacity:.85}
-.door-front .knob{position:absolute;right:14px;top:50%;width:12px;height:12px;border-radius:50%;background:var(--gold-glow);box-shadow:0 0 0 3px rgba(0,0,0,.12)}
-.door.open .door-front{transform:rotateY(-105deg);box-shadow:none;pointer-events:auto}
-@media (prefers-reduced-motion:reduce){.door-front{transition:opacity .2s}.door.open .door-front{transform:none;opacity:0;pointer-events:none}}
-.ribbon{position:absolute;top:-10px;right:12px;z-index:3;background:var(--gold);color:var(--bg);font-size:.8rem;font-weight:700;padding:.25rem .6rem;border-radius:6px}
+/* ===== characters popping in at section seams ===== */
+.critter{position:absolute;z-index:6;top:calc(var(--cw) * -.55);width:calc(var(--cw) * var(--m,1));--cw:clamp(62px,11vw,138px);--wm:1.35;--play:paused;opacity:0;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  transition:transform 1s cubic-bezier(.34,1.56,.64,1),opacity .35s ease}
+@media (max-width:600px){.critter{--wm:1.22}}
+.critter.l{left:0;transform:translateX(-150%) translateY(var(--hy,0)) rotate(var(--hr,-35deg)) scale(var(--hs,1))}
+.critter.r{right:0;transform:translateX(150%) translateY(var(--hy,0)) rotate(var(--hr,35deg)) scale(var(--hs,1))}
+.critter.tumble.l{--hr:-280deg}.critter.tumble.r{--hr:280deg}
+.critter.pop{--hs:.2}
+.critter.pop.l,.critter.pop.r{transition-timing-function:cubic-bezier(.3,1.9,.5,1),ease}
+.critter.bounce{--hy:-140%;--hr:0deg;--hs:.7;transition:transform 1.15s cubic-bezier(.25,1.75,.45,.9),opacity .3s ease}
+.critter.in{opacity:1;--play:running}
+.critter.l.in{transform:translateX(-16%) rotate(9deg)}
+.critter.r.in{transform:translateX(16%) rotate(-9deg)}
+.critter.wide{--m:var(--wm);top:calc(var(--cw) * -.35)}
+.critter.tall{--m:.62;top:calc(var(--cw) * -.75)}
+.critter.alt{top:calc(var(--cw) * -.72)}
+/* a breathing row inside long sections: a short string of lights with a character at the screen edge */
+.cr-row{position:relative;height:clamp(96px,10vw,132px);margin:.6rem 0}
+.cr-row .critter{--cw:clamp(60px,7vw,96px);top:6px}
+.cr-row .critter.l{left:calc(50% - 50vw)}
+.cr-row .critter.r{right:calc(50% - 50vw)}
+.cr-row .lights{top:50%;left:18%;right:18%;margin-top:-23px}
+@media (min-width:1180px){.cr-row{height:84px}.cr-row .lights{left:8%;right:8%}}
+.cr-tilt{transform-origin:50% 100%;transition:transform .18s ease-out}
+.cr-in{transform-origin:50% 100%;animation:bob 3.2s ease-in-out infinite;animation-play-state:var(--play)}
+.critter.r .cr-in{animation-delay:-1.6s}
+.cr-in svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 8px 10px rgba(42,5,11,.28))}
+@keyframes bob{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-6px)}}
+.critter.boop .cr-in{animation:boop .7s cubic-bezier(.3,1.6,.5,1)}
+@keyframes boop{0%{transform:scale(1)}25%{transform:scale(1.18,.82) translateY(6px)}55%{transform:scale(.9,1.12) translateY(-18px) rotate(-8deg)}100%{transform:scale(1)}}
+.bubble{position:absolute;top:-6px;padding:.25rem .7rem;border-radius:14px;background:#FFF4E2;color:#8C0D23;border:2px solid var(--outline);font-family:var(--f-hand);font-weight:700;font-size:1.35rem;white-space:nowrap;opacity:0;transform:scale(.3);pointer-events:none}
+.critter.l .bubble{left:78%;transform-origin:0 100%}
+.critter.r .bubble{right:78%;transform-origin:100% 100%}
+.critter.boop .bubble{animation:say 1.7s cubic-bezier(.3,1.5,.5,1) forwards}
+@keyframes say{0%{opacity:0;transform:scale(.3)}15%{opacity:1;transform:scale(1.05)}25%,80%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.8) translateY(-8px)}}
 
-/* tables */
-.tbl{overflow-x:auto;margin:1.5rem 0;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+/* parts inside the illustrations (symbols); --play pauses them offscreen */
+.st{animation:steam 2.6s ease-in-out infinite;animation-play-state:var(--play,running);transform-box:fill-box;transform-origin:center bottom}
+.st2{animation-delay:-.9s}.st3{animation-delay:-1.7s}
+@keyframes steam{0%{opacity:0;transform:translateY(8px) scaleY(.7)}40%{opacity:.95}100%{opacity:0;transform:translateY(-12px) scaleY(1.1)}}
+.blink{animation:blink 4.2s infinite;animation-play-state:var(--play,running);transform-box:fill-box;transform-origin:center}
+.wink{animation:wink 3.6s infinite;animation-play-state:var(--play,running);transform-box:fill-box;transform-origin:center}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@keyframes wink{0%,38%,58%,100%{transform:scaleY(1)}44%,52%{transform:scaleY(.08)}}
+.bub{animation:bubble 2.2s ease-in infinite;animation-play-state:var(--play,running)}
+.bub2{animation-delay:-.7s}.bub3{animation-delay:-1.5s}
+@keyframes bubble{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-62px);opacity:0}}
+.mustard{stroke-dasharray:200;animation:squirt 5s ease-in-out infinite;animation-play-state:var(--play,running)}
+@keyframes squirt{0%{stroke-dashoffset:200}30%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-200}}
+
+@media (prefers-reduced-motion:reduce){
+  .critter{transition:none;opacity:1;--play:paused}
+  .critter.l{transform:translateX(-16%) rotate(9deg)}
+  .critter.r{transform:translateX(16%) rotate(-9deg)}
+  .cr-in,.st,.blink,.wink,.bub,.mustard{animation:none!important}
+  .mustard{stroke-dasharray:none}
+  .st{opacity:.85}
+  .bub{opacity:0}
+}
+
+/* ===== sagging strings of glowing bulbs at the seams ===== */
+.lights{position:absolute;left:0;right:0;top:0;height:46px;pointer-events:none;z-index:1}
+.lights svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.lights .wire{fill:none;stroke:var(--pine);stroke-width:1.6;opacity:.6}
+.sl{position:absolute;width:9px;height:13px;margin:-1px 0 0 -4.5px;transform-origin:50% 0;border-radius:45% 45% 50% 50%/35% 35% 65% 65%;background:var(--c);box-shadow:0 0 10px 2px var(--c),0 0 22px 4px color-mix(in srgb,var(--c) 45%,transparent)}
+.sl::before{content:"";position:absolute;left:2px;right:2px;top:-3px;height:4px;border-radius:1px;background:#4b3a1e}
+.sl::after{content:"";position:absolute;left:2px;top:3px;width:2px;height:4px;border-radius:2px;background:rgba(255,255,255,.75)}
+@media (prefers-reduced-motion:no-preference){.lights.lit .sl{animation:tw var(--t,2.4s) ease-in-out var(--dl,0s) infinite alternate}}
+@keyframes tw{from{opacity:.42}to{opacity:1}}
+section > .lights{top:2px}
+.band + section > .lights,.ticker + section > .lights{top:10px}
+
+/* ===== bands (red and pine pages with awning edges) ===== */
+.band{background:var(--band);color:var(--band-ink);background-image:radial-gradient(rgba(255,244,226,.09) 1.3px,transparent 1.7px);background-size:24px 24px}
+.band::before,.band::after{content:"";position:absolute;left:0;right:0;height:16px;pointer-events:none}
+.band::before{top:-15px;background:radial-gradient(circle at 14px 16px,var(--band) 14px,transparent 14.5px) 0 0/28px 16px repeat-x}
+.band::after{bottom:-15px;z-index:2;background:radial-gradient(circle at 14px 0,var(--band) 14px,transparent 14.5px) 0 0/28px 16px repeat-x}
+.band.pine{--band:var(--pine-band)}
+.band h2{color:var(--band-ink);text-shadow:3px 3px 0 rgba(0,0,0,.28)}
+.band .lead{color:var(--band-ink);opacity:.92}
+.band .kicker{color:#FFD36B}
+
+/* ===== crew ===== */
+.crew{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.4rem;margin-top:2rem;list-style:none;padding:0}
+@media (max-width:540px){.crew{grid-template-columns:1fr}}
+.card{--rot:-1.5deg;position:relative;background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:1.2rem 1.2rem 1.1rem;box-shadow:var(--shadow);transform:rotate(var(--rot));transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.card:nth-child(2){--rot:1.2deg}.card:nth-child(3){--rot:-.8deg}.card:nth-child(4){--rot:1.6deg}
+.card:hover{transform:rotate(0) translateY(-6px) scale(1.02)}
+.card-top{display:flex;align-items:center;gap:.8rem}
+.bauble{width:52px;height:60px;flex:none}
+.bauble text{font-family:var(--f-display);font-weight:900;font-size:22px}
+.card b{font-family:var(--f-display);font-weight:800;font-size:1.5rem;display:block;line-height:1.1}
+.tags{display:flex;flex-wrap:wrap;gap:.35rem;margin:.85rem 0 0;padding:0;list-style:none}
+.tags li{font-size:.86rem;padding:.2rem .6rem;border-radius:999px;background:var(--surface-2);color:var(--ink)}
+.card.driver{border-color:var(--gold-fill);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold-fill) 35%,transparent),var(--shadow)}
+.drv{display:inline-flex;align-items:center;gap:.4rem;margin-top:.25rem;padding:.2rem .65rem .2rem .45rem;border-radius:999px;background:var(--pine-fill);color:#FFF4E2;font-size:.8rem;font-weight:700;letter-spacing:.02em}
+.drv svg{width:18px;height:18px}
+.card.driver .sticker{position:absolute;top:-14px;right:-8px;transform:rotate(8deg);background:var(--gold-fill);color:#5A0715;font-family:var(--f-hand);font-weight:700;font-size:1.2rem;padding:.05rem .65rem;border-radius:8px;border:2px dashed #8C0D23;box-shadow:0 3px 0 rgba(0,0,0,.15)}
+
+/* ===== advent doors ===== */
+.doors{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:1rem}
+@media (max-width:760px){.doors{grid-template-columns:1fr}}
+.best-wrap{max-width:38rem;margin-top:2.6rem}
+.door.best .door-back{min-height:13rem;padding:1.4rem 1.4rem 1.3rem;border-width:3px}
+.door.best .door-back .verdict{font-size:clamp(1.7rem,5vw,2.2rem)}
+.door.best .door-back p{font-size:1rem;max-width:30rem}
+.door.best .door-back .when{font-family:var(--f-hand);font-weight:700;font-size:1.4rem;color:var(--gold);margin:0}
+.rubber{align-self:flex-end;margin-top:.4rem;display:inline-block;padding:.25rem .8rem;border:4px double var(--pine);border-radius:10px;color:var(--pine);font-family:var(--f-display);font-weight:900;font-size:1.5rem;letter-spacing:.14em;text-transform:uppercase;transform:rotate(-9deg);opacity:.9;
+  -webkit-mask:radial-gradient(circle at 30% 40%,#000 60%,rgba(0,0,0,.7) 61%,#000 75%) 0 0/14px 14px;mask:radial-gradient(circle at 30% 40%,#000 60%,rgba(0,0,0,.7) 61%,#000 75%) 0 0/14px 14px}
+@media (prefers-reduced-motion:no-preference){.door.best.stamped .rubber{animation:slam .55s cubic-bezier(.3,1.6,.5,1) both}}
+@keyframes slam{0%{opacity:0;transform:scale(2.6) rotate(-30deg)}60%{opacity:1}100%{opacity:.9;transform:scale(1) rotate(-9deg)}}
+.others-h{margin-top:2.6rem;font-size:clamp(1.3rem,4vw,1.7rem);color:var(--band-ink);display:flex;align-items:center;gap:.6rem}
+.others-h::before{content:"";flex:none;width:28px;height:2px;background:#FFD36B;border-radius:2px}
+.door{position:relative;perspective:1200px;color:var(--ink)}
+.door-back{position:relative;min-height:15rem;border-radius:16px;background:var(--surface);border:2px solid rgba(255,244,226,.3);padding:1.1rem;display:flex;flex-direction:column;gap:.45rem;box-shadow:inset 0 0 0 6px var(--surface-2)}
+@media (max-width:520px){.door-back{min-height:11rem}}
+.door.best .door-back{border-color:var(--gold-fill);box-shadow:inset 0 0 0 6px color-mix(in srgb,var(--gold-fill) 30%,transparent),0 0 0 4px rgba(242,193,78,.35),0 0 44px rgba(242,193,78,.55)}
+.door-back .verdict{font-family:var(--f-display);font-weight:900;font-size:1.4rem;line-height:1.1;color:var(--ink)}
+.door.best .door-back .verdict{color:var(--red)}
+.door-back p{font-size:.94rem;margin:0;color:var(--ink-soft)}
+.door-front{position:absolute;inset:0;z-index:2;border:0;border-radius:16px;cursor:pointer;transform-origin:left center;transition:transform 1s cubic-bezier(.3,.7,.2,1),box-shadow 1s;background-color:#1E5A3E;color:#FFF4E2;display:flex;flex-direction:column;justify-content:space-between;padding:1.1rem;text-align:left;font:inherit;box-shadow:0 10px 22px -10px rgba(0,0,0,.6),inset 0 0 0 3px rgba(255,244,226,.25),inset 0 0 0 9px rgba(0,0,0,.08);
+  background-image:radial-gradient(circle at 20% 15%,rgba(255,255,255,.22) 0 1.5px,transparent 2px),radial-gradient(circle at 70% 40%,rgba(255,255,255,.16) 0 1px,transparent 1.5px),radial-gradient(circle at 40% 80%,rgba(255,255,255,.18) 0 1.5px,transparent 2px);background-size:46px 46px,38px 38px,52px 52px}
+.door:nth-child(2) .door-front{background-color:#FFF4E2;color:#8C0D23}
+.door:nth-child(2) .door-front{background-image:radial-gradient(circle at 20% 15%,rgba(179,18,46,.18) 0 1.5px,transparent 2px),radial-gradient(circle at 60% 60%,rgba(179,18,46,.12) 0 1.5px,transparent 2px);background-size:40px 40px,56px 56px}
+.door:nth-child(3) .door-front{background-color:#5A0715}
+.door.best .door-front{background-color:#F2C14E;color:#7A0A1C}
+.door-front:hover{transform:rotateY(-14deg)}
+.door-front .num{font-family:var(--f-display);font-weight:900;font-size:3.4rem;line-height:1;letter-spacing:-.02em}
+.door-front .hint{font-size:.85rem;font-weight:500;opacity:.9}
+.door-front .hint::after{content:" \00B7  tap to open";opacity:.7}
+.door-front .knob{position:absolute;right:14px;top:50%;width:13px;height:13px;border-radius:50%;background:#F2C14E;box-shadow:0 0 0 3px rgba(0,0,0,.15),inset -2px -2px 0 rgba(0,0,0,.2)}
+.door.best .door-front .knob{background:#B3122E}
+.door-front .wreath{position:absolute;right:12px;top:12px;width:40px;height:40px;opacity:.95}
+.door-front{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.door.open .door-front{transform:rotateY(-108deg);box-shadow:none}
+@media (prefers-reduced-motion:reduce){.door-front{transition:opacity .2s}.door-front:hover{transform:none}.door.open .door-front{transform:none;opacity:0;pointer-events:none}}
+.ribbon{position:absolute;top:-14px;right:10px;z-index:3;background:#FFF4E2;color:#B3122E;font-family:var(--f-display);font-weight:900;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .7rem;border-radius:8px;border:2px dashed #B3122E;transform:rotate(6deg);box-shadow:0 4px 0 rgba(0,0,0,.2)}
+@media (prefers-reduced-motion:no-preference){.door.best.open .ribbon{animation:wiggle .8s ease 1}}
+@keyframes wiggle{25%{transform:rotate(-6deg) scale(1.15)}60%{transform:rotate(10deg)}100%{transform:rotate(6deg)}}
+.band .note{background:var(--surface);color:var(--ink)}
+
+/* ===== notes ===== */
+.note{border-left:5px solid var(--gold-fill);padding:.8rem 1.1rem;background:var(--surface);border-radius:0 14px 14px 0;margin:1.6rem 0;box-shadow:var(--shadow)}
+
+/* ===== tables (stack into cards on phones) ===== */
+.tbl{overflow-x:auto;margin:1.4rem 0 2.2rem;border:2px solid var(--line);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}
 table{border-collapse:collapse;width:100%;min-width:40rem;font-size:.96rem}
-th,td{padding:.8rem 1rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
-th{font-weight:700;color:var(--ink-soft);font-size:.88rem;background:var(--surface-2)}
+th,td{padding:.85rem 1rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font-weight:700;color:var(--ink-soft);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:var(--surface-2)}
 tr:last-child td{border-bottom:0}
-td.k{font-family:"Young Serif",Georgia,serif;font-size:1.05rem;white-space:nowrap}
-.ok{color:var(--pine);font-weight:700}
-.warn{color:var(--gold);font-weight:700}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
+td.k{font-family:var(--f-display);font-weight:700;font-size:1.08rem;white-space:nowrap}
+.ok,.warn{font-weight:700}
+.ok span,.warn span{display:inline-block;padding:.15rem .6rem;border-radius:999px;font-size:.86rem}
+.ok span{background:var(--ok-bg);color:var(--pine)}
+.warn span{background:var(--warn-bg);color:var(--gold)}
+@media (max-width:640px){
+  .tbl.stack{overflow:visible;border:0;background:none;box-shadow:none}
+  .tbl.stack table{min-width:0;display:block}
+  .tbl.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tbl.stack tbody{display:grid;gap:.8rem}
+  .tbl.stack tr{display:block;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:.9rem 1rem;box-shadow:var(--shadow)}
+  .tbl.stack td{display:block;border:0;padding:.2rem 0}
+  .tbl.stack td.k{white-space:normal;font-size:1.2rem;padding-bottom:.35rem}
+  .tbl.stack td[data-label]:not(.k)::before{content:attr(data-label);display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:700}
+}
+.city-h{display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:2rem}
+.day-pill{font-family:var(--f-body);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .7rem;border-radius:999px;background:var(--red-fill);color:#FFF4E2}
+.day-pill.sun{background:var(--pine-fill)}
 
-/* tabs */
-.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 1rem}
-.tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.95rem;padding:.5rem 1rem;border-radius:999px;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(1.2rem,3vw,2rem);box-shadow:var(--shadow)}
+/* ===== tabs ===== */
+.tabs{position:relative;display:flex;flex-wrap:wrap;gap:.5rem;margin:1.6rem 0 1.1rem}
+@media (max-width:640px){
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x proximity;padding:.2rem 2rem .5rem .1rem;-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent)}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{scroll-snap-align:start;flex:none}
+}
+.tab{border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:.95rem;font-weight:500;padding:.5rem 1rem;border-radius:999px;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.tab:hover{border-color:var(--red);transform:translateY(-2px)}
+.tab[aria-selected="true"]{background:var(--red-fill);color:#FFF4E2;border-color:var(--red-fill);transform:rotate(-2deg)}
+.panel{position:relative;background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:clamp(1.3rem,3vw,2.2rem);padding-top:clamp(1.8rem,3.5vw,2.6rem);box-shadow:var(--shadow);overflow:hidden}
+.panel::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:repeating-linear-gradient(-45deg,var(--red-fill) 0 10px,#FFF4E2 10px 20px)}
 .panel[hidden]{display:none}
-@media (prefers-reduced-motion:no-preference){.panel.show{animation:unwrap .45s cubic-bezier(.2,.8,.2,1)}@keyframes unwrap{from{opacity:0;clip-path:inset(0 0 100% 0 round 18px)}to{opacity:1;clip-path:inset(0 0 0 0 round 18px)}}}
-.panel .for{color:var(--gold);font-weight:500;font-size:.92rem;margin:0 0 .8rem}
-.opts{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
-.opts li{display:grid;grid-template-columns:2rem 1fr;gap:.8rem;align-items:start}
-.opts .n{width:2rem;height:2rem;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);font-family:"Young Serif",Georgia,serif;color:var(--wine)}
-.opts b{display:block}
-.opts span{color:var(--ink-soft);font-size:.96rem}
+@media (prefers-reduced-motion:no-preference){
+  .panel.show{animation:unwrap .5s cubic-bezier(.2,.8,.2,1)}
+  .panel.show .opts li{animation:slideIn .5s cubic-bezier(.3,1.4,.5,1) both;animation-delay:calc(var(--i,0) * 60ms + 120ms)}
+}
+@keyframes unwrap{from{opacity:0;clip-path:inset(0 0 100% 0 round 22px)}to{opacity:1;clip-path:inset(0 0 0 0 round 22px)}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.panel .for{color:var(--gold);font-family:var(--f-hand);font-size:1.4rem;font-weight:700;margin:0 0 .9rem}
+.opts{list-style:none;margin:0;padding:0;display:grid;gap:1.05rem}
+.opts li{display:grid;grid-template-columns:2.3rem 1fr;gap:.85rem;align-items:start}
+.opts li > div{min-width:0}
+.opts .n{position:relative;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;background:var(--red-fill);color:#FFF4E2;font-family:var(--f-display);font-weight:900;margin-top:.3rem;box-shadow:inset -4px -4px 0 rgba(0,0,0,.18)}
+.opts .n::before{content:"";position:absolute;top:-6px;left:50%;width:10px;height:7px;margin-left:-5px;border-radius:2px;background:var(--gold-fill)}
+.opts li:nth-child(2n) .n{background:var(--pine-fill)}
+.opts b{display:block;font-size:1.05rem}
+.opts span{color:var(--ink-soft);font-size:.97rem}
 
-/* schedule */
-.days{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
-@media (max-width:760px){.days{grid-template-columns:1fr}}
-.day h3{display:flex;align-items:baseline;gap:.6rem}
-.day h3 small{font-family:"Schibsted Grotesk",sans-serif;font-size:.9rem}
-.tl{list-style:none;margin:1rem 0 0;padding:0 0 0 1.4rem;border-left:2px dashed var(--line)}
+/* ===== Alt vs Kölsch interlude ===== */
+.prost{text-align:center}
+.prost .lead{margin-inline:auto;max-width:34rem}
+.stage{--p:0;position:relative;height:clamp(250px,40vw,320px);margin:1.5rem auto 0;max-width:40rem}
+.glass{position:absolute;bottom:28px;display:flex;flex-direction:column;align-items:center;gap:.3rem;transform-origin:50% 100%}
+.glass svg{display:block;height:auto;overflow:visible;filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
+.glass span{font-family:var(--f-hand);font-weight:700;font-size:1.5rem;color:#FFD36B;line-height:1}
+.glass.alt{right:calc(50% + 14px);transform:translateX(calc((1 - var(--p)) * -48vw)) rotate(calc(-22deg + var(--p) * 34deg))}
+.glass.alt svg{width:clamp(96px,16vw,132px)}
+.glass.kol{left:calc(50% + 18px);transform:translateX(calc((1 - var(--p)) * 48vw)) rotate(calc(22deg - var(--p) * 34deg))}
+.glass.kol svg{width:clamp(66px,10vw,88px)}
+.burst{position:absolute;left:50%;top:0;width:180px;margin-left:-90px;display:grid;place-items:center;transform:scale(0) rotate(-20deg);opacity:0;pointer-events:none}
+.burst svg{grid-area:1/1;width:180px;height:180px}
+.burst b{grid-area:1/1;font-family:var(--f-hand);font-weight:700;font-size:2.6rem;color:#7A0A1C;transform:rotate(-8deg)}
+.stage.clinked .burst{animation:burst .8s cubic-bezier(.3,1.6,.5,1) forwards}
+@keyframes burst{to{transform:scale(1) rotate(0);opacity:1}}
+.drop{position:absolute;left:50%;top:32%;width:10px;height:10px;border-radius:50%;background:#FFF7E8;opacity:0}
+.stage.clinked .drop{animation:splash .9s ease-out forwards}
+.drop.d1{--dx:-70px;--dy:-60px}.drop.d2{--dx:60px;--dy:-80px}.drop.d3{--dx:-30px;--dy:-100px;background:#F4BC3A}.drop.d4{--dx:90px;--dy:-30px;background:#F4BC3A}.drop.d5{--dx:-100px;--dy:-20px}
+@keyframes splash{0%{opacity:1;transform:translate(0,0)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.4)}}
+.prost .verdict-line{font-family:var(--f-hand);font-size:1.5rem;color:#FFD36B;margin-top:.4rem}
+@media (prefers-reduced-motion:reduce){.stage{--p:1}.stage .burst{transform:none;opacity:1}.stage.clinked .burst,.stage.clinked .drop{animation:none}}
+
+/* ===== schedule ===== */
+.days{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2.2rem}
+@media (max-width:780px){.days{grid-template-columns:1fr}}
+.day{background:var(--surface);border:2px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden;min-width:0}
+.day-head{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;padding:1rem 1.3rem;background:var(--red-fill);color:#FFF4E2;position:relative}
+.day:nth-child(2) .day-head{background:var(--pine-fill)}
+.day-head::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:10px;background:radial-gradient(circle at 7px 0,var(--surface) 6px,transparent 6.5px) 0 0/14px 10px repeat-x;transform:scaleY(-1)}
+.day h3{margin:0;font-size:1.6rem}
+.day-head small{font-family:var(--f-hand);font-size:1.4rem;color:#FFD36B}
+.tl{list-style:none;margin:0;padding:1.4rem 1.3rem .4rem 2.9rem}
 .tl li{position:relative;padding:0 0 1.2rem}
-.tl li::before{content:"";position:absolute;left:calc(-1.4rem - 7px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 4px var(--bg)}
-.day:nth-child(2) .tl li::before{background:var(--pine)}
-.tl time{font-weight:700;font-size:.9rem;color:var(--gold);display:block}
+.tl li::after{content:"";position:absolute;left:-1.45rem;top:1rem;bottom:-.2rem;border-left:2px dashed var(--line)}
+.tl li:last-child::after{display:none}
+.tl li::before{content:"";position:absolute;left:calc(-1.45rem - 7px);top:.35rem;width:16px;height:16px;border-radius:50%;background:var(--red-fill);box-shadow:inset -3px -3px 0 rgba(0,0,0,.2),0 0 0 4px var(--surface);z-index:1}
+.day:nth-child(2) .tl li::before{background:var(--pine-fill)}
+.tl time{font-weight:700;font-size:.9rem;color:var(--gold);display:block;font-variant-numeric:tabular-nums}
 
-/* stay card */
-.pick{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;background:var(--surface);border:1px solid var(--gold);border-radius:18px;padding:1.4rem;margin:1.5rem 0;box-shadow:var(--shadow)}
-.pick .ico{width:3rem;height:3rem;border-radius:12px;background:var(--wine);color:var(--wine-ink);display:grid;place-items:center}
-.pick .ico svg{width:24px;height:24px}
-.facts{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0;padding:0;list-style:none}
-.facts li{font-size:.85rem;padding:.25rem .65rem;border-radius:999px;background:var(--surface-2)}
-.note{border-left:3px solid var(--gold);padding:.6rem 1rem;background:var(--surface);border-radius:0 10px 10px 0;margin:1.2rem 0}
+/* ===== stay ===== */
+.pick{position:relative;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start;background:var(--surface);border:2px solid var(--gold-fill);border-radius:22px;padding:1.5rem;margin:2rem 0 1.6rem;box-shadow:0 0 0 4px color-mix(in srgb,var(--gold-fill) 25%,transparent),var(--shadow)}
+.pick > div{min-width:0}
+@media (max-width:520px){.pick{grid-template-columns:1fr}}
+.pick .ico{width:3.2rem;height:3.2rem;border-radius:14px;background:var(--red-fill);color:#FFF4E2;display:grid;place-items:center;transform:rotate(-6deg)}
+.pick .ico svg{width:26px;height:26px}
+.pick .sticker{position:absolute;top:-16px;right:14px;transform:rotate(5deg);background:var(--red-fill);color:#FFF4E2;font-family:var(--f-hand);font-weight:700;font-size:1.3rem;padding:.05rem .75rem;border-radius:8px;box-shadow:0 3px 0 rgba(0,0,0,.2)}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0 0;padding:0;list-style:none}
+.facts li{font-size:.85rem;padding:.25rem .7rem;border-radius:999px;background:var(--surface-2)}
 ul.clean{padding-left:1.2rem}
-ul.clean li{margin:.35rem 0}
+ul.clean li{margin:.45rem 0}
+ul.clean li::marker{color:var(--red)}
 
-/* checklist */
-.check{list-style:none;padding:0;display:grid;gap:.5rem;margin-top:1rem}
-.check label{display:flex;gap:.7rem;align-items:center;padding:.7rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:12px;cursor:pointer}
-.check input{width:1.2rem;height:1.2rem;accent-color:var(--wine)}
-.check input:checked+span{text-decoration:line-through;color:var(--ink-soft)}
+/* ===== drive ===== */
+.driver-card{position:relative;display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:center;background:var(--pine-fill);color:#FFF4E2;border-radius:22px;padding:1.3rem 1.4rem;margin:1.6rem 0;box-shadow:var(--shadow)}
+.driver-card > div{min-width:0}
+.driver-card .wheel-ico{width:56px;height:56px;color:#F2C14E}
+@media (prefers-reduced-motion:no-preference){.driver-card .wheel-ico{animation:steer 4s ease-in-out infinite}}
+@keyframes steer{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+.driver-card h3{color:#FFF4E2;margin:0 0 .2rem}
+.driver-card p{margin:.3rem 0 0;color:#E4F2EA}
+.driver-card .tagline{font-family:var(--f-hand);font-size:1.35rem;color:#FFD36B;margin:0}
+.route{position:relative;background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:1.2rem 1.2rem 1rem;box-shadow:var(--shadow);margin:1.4rem 0}
+.road{position:relative;height:86px;margin:0 6px}
+.road::before{content:"";position:absolute;left:0;right:0;bottom:22px;height:8px;border-radius:4px;background:var(--ink-soft);opacity:.85}
+.road::after{content:"";position:absolute;left:4px;right:4px;bottom:25px;height:2px;background:repeating-linear-gradient(90deg,#FFF4E2 0 10px,transparent 10px 20px)}
+.stopdot{position:absolute;bottom:18px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--surface);border:3px solid var(--ink-soft);z-index:1;transition:background .3s,border-color .3s,transform .3s}
+.stopdot.hit{background:var(--gold-fill);border-color:var(--red-fill);transform:scale(1.25)}
+.stoplbl{position:absolute;bottom:-6px;font-size:.78rem;font-weight:700;color:var(--ink-soft);white-space:nowrap;transform:translateX(-50%)}
+.stoplbl.first{transform:none;left:-6px!important}
+.stoplbl.last{transform:translateX(-100%)}
+.car{position:absolute;left:0;bottom:28px;width:82px;z-index:2;will-change:transform}
+.car svg{display:block;width:100%;height:auto;overflow:visible}
+.car .wh{transform-box:fill-box;transform-origin:center}
+.legs{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
+.legs li{display:grid;grid-template-columns:1.8rem 1fr;gap:.6rem;align-items:baseline;padding:.55rem .7rem;border-radius:12px;transition:background .3s}
+.legs li.on{background:var(--surface-2)}
+.legs .ln{font-family:var(--f-display);font-weight:900;color:var(--red)}
+.legs li > span:last-child{min-width:0}
+.legs .chip{display:inline-block;margin-right:.45rem;padding:.05rem .5rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;vertical-align:.12em;background:var(--red-fill);color:#FFF4E2}
+.legs .chip.sun{background:var(--pine-fill)}
+.route-mini{display:block;margin-top:.35rem;font-size:.84rem;color:var(--ink-soft);line-height:1.35}
+.card .route-mini b,.route-mini b{display:inline;font-family:var(--f-body);font-size:inherit;line-height:inherit;color:var(--ink);font-weight:700}
 
-footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.92rem}
+/* ===== checklist ===== */
+.check{list-style:none;padding:0;display:grid;gap:.55rem;margin-top:1rem}
+.check label{display:flex;gap:.8rem;align-items:center;padding:.8rem 1rem;background:var(--surface);border:2px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s,transform .25s cubic-bezier(.3,1.6,.5,1)}
+.check label:hover{border-color:var(--red);transform:translateX(4px)}
+.check input{appearance:none;-webkit-appearance:none;margin:0;width:1.55rem;height:1.55rem;flex:none;border:2px solid var(--red);border-radius:8px;background:var(--surface);cursor:pointer;transition:background-color .2s,transform .3s cubic-bezier(.3,1.6,.5,1)}
+.check input:checked{background:var(--red-fill) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFF4E2' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center/72% no-repeat;border-color:var(--red-fill);transform:rotate(-10deg) scale(1.1)}
+.check input:checked+span{text-decoration:line-through;text-decoration-color:var(--red);color:var(--ink-soft)}
+.check .fixed .lbl{display:flex;gap:.8rem;align-items:center;padding:.8rem 1rem;border-radius:14px;border:2px solid var(--pine-fill);background:var(--ok-bg);color:var(--ink);font-weight:500}
+.check .fixed .tk{flex:none;width:1.55rem;height:1.55rem;border-radius:8px;transform:rotate(-10deg) scale(1.1);background:var(--pine-fill) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFF4E2' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center/72% no-repeat}
+.check .fixed small{margin-left:auto;font-family:var(--f-hand);font-size:1.15rem;font-weight:700;color:var(--pine);white-space:nowrap}
+.progress{display:flex;align-items:center;gap:.8rem;margin-top:1rem}
+.cane-track{flex:1;height:14px;border-radius:999px;background:var(--surface-2);border:2px solid var(--line);overflow:hidden}
+.cane{height:100%;width:0;border-radius:999px;background:repeating-linear-gradient(-45deg,var(--red-fill) 0 8px,#FFF4E2 8px 16px);transition:width .6s cubic-bezier(.3,1.3,.5,1)}
+#progTxt{font-family:var(--f-hand);font-weight:700;font-size:1.35rem;color:var(--gold);white-space:nowrap;margin:0}
 
-/* theme transition: circular reveal from the toggle */
+/* ===== footer ===== */
+footer{position:relative;padding-block:4.5rem 4rem;font-size:.95rem;text-align:center}
+footer .gang{display:flex;justify-content:center;align-items:flex-end;gap:clamp(.4rem,2vw,1.2rem);margin:0 auto 1.4rem;--play:paused}
+footer.in .gang{--play:running}
+footer .gang > div{animation:bob 2.6s ease-in-out infinite;animation-play-state:var(--play);transform-origin:50% 100%}
+footer .gang > div:nth-child(2){animation-delay:-.6s}footer .gang > div:nth-child(3){animation-delay:-1.2s}footer .gang > div:nth-child(4){animation-delay:-1.8s}
+footer .gang svg{display:block;height:auto;overflow:visible}
+footer .big{font-family:var(--f-display);font-weight:900;font-size:clamp(2rem,6vw,3rem);color:var(--band-ink);margin:.2rem 0 .6rem;text-shadow:3px 3px 0 rgba(0,0,0,.28)}
+footer p{max-width:40rem;margin:0 auto;color:var(--band-ink);opacity:.9}
+@media (prefers-reduced-motion:reduce){footer .gang > div{animation:none}}
+
+/* ===== reveal on scroll (only for content below the first screen) ===== */
+html.js .pre{opacity:0;transform:translateY(26px)}
+html.js .rv{transition:opacity .7s ease,transform .8s cubic-bezier(.2,.9,.3,1.2)}
+html.js .stagger.pre{opacity:1;transform:none}
+html.js .stagger.pre > *{opacity:0;transform:translateY(22px) scale(.96)}
+html.js .stagger > *{transition:opacity .6s ease,transform .7s cubic-bezier(.3,1.5,.5,1);transition-delay:calc(var(--i,0) * 80ms)}
+html.js .crew.stagger.pre > *{transform:scale(1.25) rotate(-6deg)}
+html.js .crew.stagger > *{transition-property:opacity,transform}
+@media (prefers-reduced-motion:reduce){html.js .pre,html.js .stagger.pre > *{opacity:1;transform:none}}
+
+/* light snow that keeps drifting behind the content past the hero */
+#snow2{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:0;transition:opacity .6s}
+#snow2.on{opacity:1}
+@media (prefers-reduced-motion:reduce){#snow2{display:none}}
+
+/* confetti */
+.cf{position:fixed;width:8px;height:12px;border-radius:2px;pointer-events:none;z-index:60;top:0;left:0}
+
+/* theme switch: circular reveal */
 ::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 </style>
 </head>
 <body>
 
+<!-- Illustrations, drawn once and reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Glühwein mug with orange slice, cinnamon and steam -->
+    <symbol id="s-mug" viewBox="0 0 124 140">
+      <g fill="none" stroke="#FFF4E2" stroke-width="5" stroke-linecap="round">
+        <path class="st" d="M40 30c-8-7 8-12 0-22"/>
+        <path class="st st2" d="M60 26c-8-7 8-12 0-22"/>
+        <path class="st st3" d="M80 30c-8-7 8-12 0-22"/>
+      </g>
+      <path d="M98 64h6a16 16 0 0 1 0 32h-6" fill="none" stroke="#3B0A10" stroke-width="13" stroke-linecap="round"/>
+      <path d="M98 64h6a16 16 0 0 1 0 32h-6" fill="none" stroke="#D7263D" stroke-width="5" stroke-linecap="round"/>
+      <path d="M16 44h86v70a22 22 0 0 1-22 22H38a22 22 0 0 1-22-22Z" fill="#D7263D" stroke="#3B0A10" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M16 62h86" stroke="#FFF4E2" stroke-width="4"/>
+      <path d="M22 70l6 5 6-5 6 5 6-5 6 5 6-5 6 5 6-5 6 5 6-5 6 5 6-5 6 5" fill="none" stroke="#FFF4E2" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M24 118c6 6 12 8 18 8" fill="none" stroke="#FF7A8C" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+      <rect x="31" y="14" width="8" height="36" rx="3.5" transform="rotate(-16 35 32)" fill="#8B4A1C" stroke="#3B0A10" stroke-width="2.5"/>
+      <ellipse cx="59" cy="44" rx="43" ry="9" fill="#3B0A10"/>
+      <ellipse cx="59" cy="45" rx="37" ry="6" fill="#7A0C1E"/>
+      <ellipse cx="47" cy="44" rx="11" ry="2" fill="#C2485A"/>
+      <g transform="translate(92 38) rotate(18)">
+        <circle r="13" fill="#F7A21B" stroke="#3B0A10" stroke-width="3"/>
+        <circle r="9" fill="#FFD27A"/>
+        <path d="M0-9V9M-9 0H9M-6.4-6.4l12.8 12.8M6.4-6.4L-6.4 6.4" stroke="#F7A21B" stroke-width="1.6"/>
+      </g>
+      <g class="blink"><ellipse cx="46" cy="94" rx="5" ry="6.5" fill="#3B0A10"/><circle cx="47.6" cy="91.6" r="1.8" fill="#fff"/></g>
+      <g class="blink"><ellipse cx="74" cy="94" rx="5" ry="6.5" fill="#3B0A10"/><circle cx="75.6" cy="91.6" r="1.8" fill="#fff"/></g>
+      <ellipse cx="36" cy="106" rx="6.5" ry="3.8" fill="#FF8FA0" opacity=".85"/>
+      <ellipse cx="84" cy="106" rx="6.5" ry="3.8" fill="#FF8FA0" opacity=".85"/>
+      <path d="M51 105q9 9 18 0" fill="none" stroke="#3B0A10" stroke-width="3.8" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- Altbier in a short Becher glass -->
+    <symbol id="s-alt" viewBox="0 0 110 150">
+      <path d="M20 46h70l-5 88a10 10 0 0 1-10 9H35a10 10 0 0 1-10-9Z" fill="#9A4214" stroke="#3B0A10" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M30 58l3.5 72" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".28"/>
+      <g fill="#F8C77E"><circle class="bub" cx="44" cy="132" r="2.6"/><circle class="bub bub2" cx="66" cy="134" r="2.1"/><circle class="bub bub3" cx="76" cy="128" r="2.5"/></g>
+      <g fill="#3B0A10" stroke="#3B0A10" stroke-width="8">
+        <circle cx="27" cy="44" r="11"/><circle cx="45" cy="36" r="13"/><circle cx="65" cy="35" r="13"/><circle cx="83" cy="44" r="11"/><circle cx="55" cy="48" r="12"/>
+      </g>
+      <g fill="#FFF7E8">
+        <circle cx="27" cy="44" r="11"/><circle cx="45" cy="36" r="13"/><circle cx="65" cy="35" r="13"/><circle cx="83" cy="44" r="11"/><circle cx="55" cy="48" r="12"/>
+      </g>
+      <path d="M84 52v12a3.5 3.5 0 0 0 7 0v-9" fill="#FFF7E8" stroke="#3B0A10" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="44" cy="32" r="3" fill="#fff"/>
+      <g class="blink"><ellipse cx="44" cy="84" rx="4.8" ry="6.2" fill="#2A0A0E"/><circle cx="45.6" cy="81.8" r="1.7" fill="#fff"/></g>
+      <g class="blink"><ellipse cx="68" cy="84" rx="4.8" ry="6.2" fill="#2A0A0E"/><circle cx="69.6" cy="81.8" r="1.7" fill="#fff"/></g>
+      <ellipse cx="36" cy="96" rx="6" ry="3.5" fill="#FF8FA0" opacity=".75"/>
+      <ellipse cx="76" cy="96" rx="6" ry="3.5" fill="#FF8FA0" opacity=".75"/>
+      <path d="M48 95q8 9 16 0Z" fill="#5A0715" stroke="#2A0A0E" stroke-width="3" stroke-linejoin="round"/>
+      <text x="56" y="124" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="13" fill="#FFE2B0" letter-spacing="1">ALT</text>
+    </symbol>
+
+    <!-- Kölsch in a tall Stange -->
+    <symbol id="s-kol" viewBox="0 0 80 176">
+      <rect x="15" y="40" width="50" height="124" rx="8" fill="#F4BC3A" stroke="#3B0A10" stroke-width="4"/>
+      <rect x="12" y="156" width="56" height="14" rx="5" fill="#FCE7B2" stroke="#3B0A10" stroke-width="4"/>
+      <path d="M24 52v96" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".38"/>
+      <g fill="#FFF3CC"><circle class="bub" cx="34" cy="148" r="2.3"/><circle class="bub bub2" cx="52" cy="150" r="2"/><circle class="bub bub3" cx="44" cy="144" r="2.4"/></g>
+      <g fill="#3B0A10" stroke="#3B0A10" stroke-width="8">
+        <circle cx="24" cy="40" r="10"/><circle cx="40" cy="33" r="12"/><circle cx="56" cy="40" r="10"/><circle cx="40" cy="44" r="10"/>
+      </g>
+      <g fill="#FFFBF0">
+        <circle cx="24" cy="40" r="10"/><circle cx="40" cy="33" r="12"/><circle cx="56" cy="40" r="10"/><circle cx="40" cy="44" r="10"/>
+      </g>
+      <circle cx="35" cy="29" r="2.6" fill="#fff"/>
+      <g class="blink"><ellipse cx="31" cy="84" rx="4.3" ry="5.8" fill="#2A0A0E"/><circle cx="32.4" cy="82" r="1.5" fill="#fff"/></g>
+      <g class="blink"><ellipse cx="51" cy="84" rx="4.3" ry="5.8" fill="#2A0A0E"/><circle cx="52.4" cy="82" r="1.5" fill="#fff"/></g>
+      <ellipse cx="24" cy="95" rx="5" ry="3" fill="#FF8FA0" opacity=".75"/>
+      <ellipse cx="58" cy="95" rx="5" ry="3" fill="#FF8FA0" opacity=".75"/>
+      <path d="M34 94q7 7 14 0" fill="none" stroke="#2A0A0E" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M15 60h7M15 64h4" stroke="#B07D12" stroke-width="2"/>
+    </symbol>
+
+    <!-- Winking Bratwurst in a bun with mustard -->
+    <symbol id="s-wurst" viewBox="0 0 176 104">
+      <path d="M10 56c0-16 18-22 32-22h92c14 0 32 6 32 22" fill="#C98236" stroke="#3B0A10" stroke-width="4"/>
+      <rect x="6" y="22" width="164" height="46" rx="23" fill="#B4501F" stroke="#3B0A10" stroke-width="4"/>
+      <path d="M28 30l-8 32M42 30l-8 32M140 30l-8 32M154 30l-8 32" stroke="#6E2A0E" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+      <path d="M30 30h26" stroke="#E07A45" stroke-width="4" stroke-linecap="round"/>
+      <path class="mustard" d="M22 34l9-6 9 6 9-6 9 6 9-6 9 6 9-6 9 6 9-6 9 6 9-6 9 6 9-6 9 6 9-6 9 6" fill="none" stroke="#F6C915" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <g class="blink"><ellipse cx="74" cy="47" rx="4.8" ry="6.2" fill="#2A0A0E"/><circle cx="75.6" cy="44.8" r="1.7" fill="#fff"/></g>
+      <g class="wink"><ellipse cx="102" cy="47" rx="4.8" ry="6.2" fill="#2A0A0E"/><circle cx="103.6" cy="44.8" r="1.7" fill="#fff"/></g>
+      <path d="M96 39l12-3" stroke="#2A0A0E" stroke-width="2.6" stroke-linecap="round"/>
+      <ellipse cx="64" cy="58" rx="6" ry="3.4" fill="#FF8FA0" opacity=".8"/>
+      <ellipse cx="112" cy="58" rx="6" ry="3.4" fill="#FF8FA0" opacity=".8"/>
+      <path d="M80 57q8 8 16 0" fill="none" stroke="#2A0A0E" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M8 60c6 28 28 38 46 38h68c18 0 40-10 46-38-10 10-28 14-38 14H46c-10 0-28-4-38-14Z" fill="#E8A552" stroke="#3B0A10" stroke-width="4" stroke-linejoin="round"/>
+      <g fill="#FFF1D6"><ellipse cx="44" cy="86" rx="3" ry="1.6"/><ellipse cx="72" cy="90" rx="3" ry="1.6"/><ellipse cx="104" cy="90" rx="3" ry="1.6"/><ellipse cx="132" cy="86" rx="3" ry="1.6"/><ellipse cx="88" cy="84" rx="3" ry="1.6"/></g>
+    </symbol>
+
+    <!-- Bauble for crew avatars -->
+    <symbol id="s-bauble" viewBox="0 0 52 60">
+      <path d="M26 0v8" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+      <rect x="19" y="7" width="14" height="8" rx="2" fill="#F2C14E" stroke="#3B0A10" stroke-width="2"/>
+      <circle cx="26" cy="36" r="22" fill="var(--bc,#C8102E)" stroke="#3B0A10" stroke-width="2.5"/>
+      <path d="M8 30c12 6 24 6 36 0" fill="none" stroke="#FFF4E2" stroke-width="2" opacity=".6"/>
+      <ellipse cx="17" cy="27" rx="4" ry="6" fill="#fff" opacity=".35" transform="rotate(30 17 27)"/>
+    </symbol>
+
+    <!-- Wreath on advent doors -->
+    <symbol id="s-wreath" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="13" fill="none" stroke="#2E8B57" stroke-width="7" stroke-dasharray="3 2"/>
+      <circle cx="20" cy="20" r="13" fill="none" stroke="#1B5E3A" stroke-width="2"/>
+      <circle cx="12" cy="11" r="2.4" fill="#E0233F"/><circle cx="29" cy="14" r="2.4" fill="#E0233F"/><circle cx="26" cy="31" r="2.4" fill="#E0233F"/><circle cx="10" cy="27" r="2.4" fill="#E0233F"/>
+      <path d="M16 33l4-4 4 4-4 3Z" fill="#E0233F"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="bar">
   <div class="wrap bar-in">
-    <a class="brand" href="#top">Düsseldorf + Köln, 28-29 Nov</a>
+    <a class="brand" href="#top"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Düsseldorf + Köln, 28-29 Nov</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#weekend">Weekend</a><a href="#markets">Markets</a><a href="#do">Things to do</a><a href="#plan">Plan</a><a href="#stay">Stay</a><a href="#drive">Drive</a><a href="#check">Fact check</a>
+      <a href="#crew">Crew</a><a href="#weekend">Weekend</a><a href="#markets">Markets</a><a href="#do">Things to do</a><a href="#plan">Plan</a><a href="#stay">Stay</a><a href="#drive">Drive</a><a href="#check">Fact check</a>
     </nav>
     <button class="theme" id="themeBtn" type="button" aria-label="Switch light or dark mode">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
@@ -209,78 +704,165 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
   <div class="garland" aria-hidden="true"><svg id="garland" preserveAspectRatio="none"></svg></div>
 </header>
 
+<canvas id="snow2" aria-hidden="true"></canvas>
+<div class="page">
 <main id="top">
-  <section class="hero" aria-label="Intro">
+  <section class="hero" id="hero" aria-label="Intro">
+    <div class="rays" aria-hidden="true"></div>
     <canvas id="snow" aria-hidden="true"></canvas>
+    <div class="awning-shade" aria-hidden="true"></div>
+    <div class="awning" aria-hidden="true"></div>
+    <svg id="heroLights" aria-hidden="true"></svg>
+    <div class="baubles" aria-hidden="true">
+      <span class="bb" style="--x:5%;--len:34px;--c:#FF3B5C;--sz:24px;--dl:-.6s"></span>
+      <span class="bb" style="--x:14%;--len:66px;--c:#1D9B6E;--sz:30px;--dl:-1.7s;--sw:4.1s"></span>
+      <span class="bb only-s" style="--x:24%;--len:22px;--c:#F2C14E;--sz:20px;--dl:-2.3s;--sw:3.1s"></span>
+      <span class="bb hide-s" style="--x:62%;--len:96px;--c:#F2C14E;--sz:34px;--dl:-1.1s;--sw:4.4s"></span>
+      <span class="bb hide-s" style="--x:69%;--len:50px;--c:#FF3B5C;--sz:24px;--dl:-2.4s;--sw:3.3s"></span>
+    </div>
     <svg class="skyline" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <!-- Düsseldorf's Rheinturm on the left, Cologne's Dom on the right -->
+      <defs><radialGradient id="g-starglow"><stop offset="0" stop-color="#FFD36B" stop-opacity=".95"/><stop offset="1" stop-color="#FFD36B" stop-opacity="0"/></radialGradient>
+        <linearGradient id="g-counter" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE7A3"/><stop offset="1" stop-color="#FFB547"/></linearGradient></defs>
+      <!-- Düsseldorf's Rheinturm on the left, Cologne's Dom on the right, a market in front -->
+      <path class="b2" d="M300 420V320h50v-20h40v20h60v-30h70v130Z M600 420V300h70v-25h50v25h60v120Z"/>
       <path class="b" d="M0 420V300h40v-30h50v30h30v-55l28-30 28 30v55h40v-20h60v20h20V250h70v50h30v-40l25-25 25 25v40h40V290h60v130Z"/>
-      <path class="b" d="M262 420V150h-6v-14h-14v-10h14v-14h6V20h4v92h6v14h14v10h-14v14h-6v270Z"/>
-      <path class="b" d="M880 420V230h30l10-60h12l10 60h20V150l12-70 8-60 8 60 12 70v80h40v-80l12-70 8-60 8 60 12 70v80h20l10-60h12l10 60h30v190Z"/>
-      <path class="b" d="M1180 420V280h50v-30h60v30h40v-50h60v50h50v140Z"/>
-      <path class="b" d="M0 420v-36c120-12 240-12 360 0s240 12 360 0 240-12 360 0 240 12 360 0v36Z" opacity=".55"/>
-      <g>
+      <g transform="translate(270 0)">
+        <path class="b" d="M262 420V150h-6v-14h-14v-10h14v-14h6V20h4v92h6v14h14v10h-14v14h-6v270Z"/>
         <rect class="w t" x="250" y="128" width="26" height="4" rx="2"/>
+      </g>
+      <g transform="translate(-60 0)">
+        <path class="b" d="M880 420V230h30l10-60h12l10 60h20V150l12-70 8-60 8 60 12 70v80h40v-80l12-70 8-60 8 60 12 70v80h20l10-60h12l10 60h30v190Z"/>
         <rect class="w t" x="970" y="190" width="8" height="16" rx="4"/><rect class="w t2" x="1062" y="190" width="8" height="16" rx="4"/>
         <rect class="w" x="970" y="250" width="8" height="18" rx="4"/><rect class="w t" x="1062" y="250" width="8" height="18" rx="4"/>
         <rect class="w t2" x="1014" y="300" width="12" height="24" rx="6"/>
+      </g>
+      <path class="b" d="M1180 420V280h50v-30h60v30h40v-50h60v50h50v140Z"/>
+      <path class="snowcap" d="M90 270h-50v6c8 4 16 0 25 3s17-1 25-3Z M1290 250h-60v6c10 4 20-1 30 3s20-1 30-3Z M340 260h-70v5c12 4 22 0 35 3s24-1 35-3Z"/>
+      <path class="b" d="M0 420v-36c120-12 240-12 360 0s240 12 360 0 240-12 360 0 240 12 360 0v36Z" opacity=".6"/>
+      <g>
         <rect class="w t" x="60" y="315" width="10" height="12"/><rect class="w" x="140" y="270" width="10" height="12"/><rect class="w t2" x="330" y="280" width="10" height="12"/>
         <rect class="w" x="455" y="305" width="10" height="12"/><rect class="w t" x="1200" y="300" width="10" height="12"/><rect class="w t2" x="1300" y="250" width="10" height="12"/>
         <rect class="w" x="1380" y="300" width="10" height="12"/>
       </g>
+      <g id="fore" transform="translate(0 -22)"></g>
     </svg>
-    <div class="wrap hero-copy">
-      <h1><span>Altbier,</span><span>Glühwein &amp;</span><span>the Dom.</span></h1>
-      <div class="date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Saturday 28 to Sunday 29 November 2026</div>
-      <p class="lead">Four friends, one car from Rotterdam. Düsseldorf by day and by night on Saturday, then Cologne's markets on Sunday before the drive home.</p>
-    </div>
-  </section>
 
-  <section id="crew">
-    <div class="wrap">
-      <h2>Who's coming</h2>
-      <p class="lead narrow">Markets, Altbier and the Kö by day, one great dinner, cocktails, then out dancing. Sunday is Glühwein, skating and the Dom in Cologne.</p>
-      <div class="crew">
-        <div><b>Giamo</b><p>Drinks, bratwurst, skating, nightlife, art, architecture, long walks</p></div>
-        <div><b>Kiara</b><p>Glühwein, cosy evenings, architecture, art, a bit of shopping</p></div>
-        <div><b>Liz</b><p>Fine dining, cocktails, cats, fashionista</p></div>
-        <div><b>Mike</b><p>Drinks, food, nightlife, arcade, fashionista</p></div>
+    <div class="hero-critter l" aria-hidden="true"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div>
+    <div class="hero-critter r" aria-hidden="true"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div>
+
+    <div class="wrap hero-copy">
+      <div class="stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs><path id="ringPath" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+          <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width="3"/>
+          <circle cx="60" cy="60" r="35" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>
+          <g class="ring"><text font-family="Fraunces, Georgia, serif" font-weight="900" font-size="11.5" letter-spacing="2.2" fill="currentColor"><textPath href="#ringPath">IT'S HAPPENING &#183; CONFIRMED &#183; IT'S HAPPENING &#183; </textPath></text></g>
+          <text x="60" y="56" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="900" font-size="20" fill="currentColor">28-29</text>
+          <text x="60" y="74" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="700" font-size="12" letter-spacing="2" fill="currentColor">NOV 2026</text>
+        </svg>
+      </div>
+      <h1><span>Altbier,</span><span><em>Glühwein</em> &amp;</span><span>the Dom.</span></h1>
+      <div class="hero-meta">
+        <div class="date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Saturday 28 to Sunday 29 November 2026</div>
+        <div class="happening"><i aria-hidden="true"></i>Confirmed, it's happening</div>
+      </div>
+      <p class="lead">Four friends, one car from Rotterdam, Giamo at the wheel. Düsseldorf by day and by night on Saturday, then Cologne's markets on Sunday before the drive home.</p>
+      <div class="countdown" id="countdown" role="timer" aria-label="Countdown to departure">
+        <div class="cd-row" id="cdRow">
+          <div class="cd"><b id="cdD">--</b><span>days</span></div>
+          <div class="cd"><b id="cdH">--</b><span>hours</span></div>
+          <div class="cd"><b id="cdM">--</b><span>min</span></div>
+          <div class="cd"><b id="cdS">--</b><span>sec</span></div>
+        </div>
+        <p class="cd-label" id="cdLabel">until we leave Rotterdam, Saturday 07:30</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#plan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>See the plan</a>
+        <a class="btn ghost" href="#weekend">Why this weekend</a>
       </div>
     </div>
   </section>
 
-  <section id="weekend">
+  <div class="ticker" id="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Glühwein</span><span>Altbier</span><span>Bratwurst</span><span>Kölsch</span><span>Reibekuchen</span><span>Roasted chestnuts</span><span>Ice skating</span><span>Prost!</span><span>Kölle Alaaf</span>
+      <span>Glühwein</span><span>Altbier</span><span>Bratwurst</span><span>Kölsch</span><span>Reibekuchen</span><span>Roasted chestnuts</span><span>Ice skating</span><span>Prost!</span><span>Kölle Alaaf</span>
+    </div>
+  </div>
+
+  <section id="crew">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter alt r bounce" data-say="Prost!|Altbier first|Kölle Alaaf!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 110 150"><use href="#s-alt"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter l pop" data-say="Prost!|Zum Wohl!|Warm hands!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>Which weekend?</h2>
-      <p class="lead narrow">28-29 November still wins, and with the Düsseldorf-then-Cologne plan it's the only November weekend that works for both days. Open the doors to see why.</p>
+      <p class="kicker rv">The crew</p>
+      <h2 class="rv">Who's coming</h2>
+      <p class="lead narrow rv">Markets, Altbier and the Kö by day, one great dinner, cocktails, then out dancing. Sunday is Glühwein, skating and the Dom in Cologne.</p>
+      <ul class="crew stagger">
+        <li class="card driver">
+          <span class="sticker" aria-hidden="true">at the wheel</span>
+          <div class="card-top"><svg class="bauble" style="--bc:#C8102E" aria-hidden="true"><use href="#s-bauble"/><text x="26" y="44" text-anchor="middle" fill="#FFF4E2">G</text></svg>
+            <div><b>Giamo</b><span class="drv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M3.5 10.5h6M14.5 10.5h6M12 14.5V21"/></svg>Designated driver</span><span class="route-mini"><b>At the wheel:</b> Rotterdam, Düsseldorf, Cologne, home</span></div></div>
+          <ul class="tags"><li>Drinks</li><li>bratwurst</li><li>skating</li><li>nightlife</li><li>art</li><li>architecture</li><li>long walks</li></ul>
+        </li>
+        <li class="card">
+          <div class="card-top"><svg class="bauble" style="--bc:#1E6B48" aria-hidden="true"><use href="#s-bauble"/><text x="26" y="44" text-anchor="middle" fill="#FFF4E2">K</text></svg><b>Kiara</b></div>
+          <ul class="tags"><li>Glühwein</li><li>cosy evenings</li><li>architecture</li><li>art</li><li>a bit of shopping</li></ul>
+        </li>
+        <li class="card">
+          <div class="card-top"><svg class="bauble" style="--bc:#F2C14E" aria-hidden="true"><use href="#s-bauble"/><text x="26" y="44" text-anchor="middle" fill="#7A0A1C">L</text></svg><b>Liz</b></div>
+          <ul class="tags"><li>Fine dining</li><li>cocktails</li><li>cats</li><li>fashionista</li></ul>
+        </li>
+        <li class="card">
+          <div class="card-top"><svg class="bauble" style="--bc:#7A0C4E" aria-hidden="true"><use href="#s-bauble"/><text x="26" y="44" text-anchor="middle" fill="#FFF4E2">M</text></svg><b>Mike</b></div>
+          <ul class="tags"><li>Drinks</li><li>food</li><li>nightlife</li><li>arcade</li><li>fashionista</li></ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="weekend" class="band">
+    <div class="critter l tall" data-say="28-29, baby!|Locked in!|Kölsch later?" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter r wide tumble" data-say="Lecker!|Senf drauf!|*wink*" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div>
+    <div class="wrap">
+      <p class="kicker rv">Locked in</p>
+      <h2 class="rv">Why this weekend</h2>
+      <p class="lead narrow rv">It's settled: Saturday 28 to Sunday 29 November. With the Düsseldorf-then-Cologne plan it's the only November weekend that works for both days. Open the doors to see why the others lost out.</p>
+      <div class="best-wrap">
+        <div class="door best open" id="bestDoor">
+          <span class="ribbon">Confirmed</span>
+          <div class="door-back"><p class="when">Saturday 28 + Sunday 29 November</p><div class="verdict">It's happening</div><p>Saturday: every Düsseldorf market open until 21:00. Sunday: Cologne's Dom market from 11:00 and Heinzels with its ice rink. First Advent, so busy.</p><span class="rubber" aria-hidden="true">Confirmed</span></div>
+          <button class="door-front" type="button" aria-expanded="true" aria-label="28-29 November, confirmed weekend"><svg class="wreath" aria-hidden="true"><use href="#s-wreath"/></svg><span class="num">28-29</span><span class="hint">November</span><span class="knob"></span></button>
+        </div>
+      </div>
+      <h3 class="others-h rv">The other weekends, and why they lost</h3>
       <div class="doors" id="doors">
         <div class="door">
           <div class="door-back"><div class="verdict">Skip it</div><p>No Christmas markets open in either city.</p></div>
-          <button class="door-front" type="button" aria-expanded="false"><span class="num">7-8</span><span class="hint">November</span><span class="knob"></span></button>
+          <button class="door-front" type="button" aria-expanded="false"><svg class="wreath" aria-hidden="true"><use href="#s-wreath"/></svg><span class="num">7-8</span><span class="hint">November</span><span class="knob"></span></button>
         </div>
         <div class="door">
           <div class="door-back"><div class="verdict">Too early</div><p>Düsseldorf's markets only open on 19 Nov, and Cologne's Dom market on 16 Nov.</p></div>
-          <button class="door-front" type="button" aria-expanded="false"><span class="num">14-15</span><span class="hint">November</span><span class="knob"></span></button>
+          <button class="door-front" type="button" aria-expanded="false"><svg class="wreath" aria-hidden="true"><use href="#s-wreath"/></svg><span class="num">14-15</span><span class="hint">November</span><span class="knob"></span></button>
         </div>
         <div class="door">
           <div class="door-back"><div class="verdict">Sunday is lost</div><p>Saturday in Düsseldorf works, but Sunday 22 Nov is Totensonntag: Düsseldorf's markets are shut all day and Cologne's until 18:00. No Heinzels ice rink yet either.</p></div>
-          <button class="door-front" type="button" aria-expanded="false"><span class="num">21-22</span><span class="hint">November</span><span class="knob"></span></button>
-        </div>
-        <div class="door best" id="bestDoor">
-          <span class="ribbon">Our pick</span>
-          <div class="door-back"><div class="verdict">Go now</div><p>Saturday: every Düsseldorf market open until 21:00. Sunday: Cologne's Dom market from 11:00 and Heinzels with its ice rink. First Advent, so busy.</p></div>
-          <button class="door-front" type="button" aria-expanded="false"><span class="num">28-29</span><span class="hint">November</span><span class="knob"></span></button>
+          <button class="door-front" type="button" aria-expanded="false"><svg class="wreath" aria-hidden="true"><use href="#s-wreath"/></svg><span class="num">21-22</span><span class="hint">November</span><span class="knob"></span></button>
         </div>
       </div>
-      <div class="note"><b>Tips:</b> book now, bring cash (Düsseldorf's market FAQ says there are no cash machines on the markets), and aim to be at Cologne's Dom market close to its 11:00 opening on Sunday, before the Advent crowds.</div>
+      <div class="note rv"><b>Tips:</b> book now, bring cash (Düsseldorf's market FAQ says there are no cash machines on the markets), and aim to be at Cologne's Dom market close to its 11:00 opening on Sunday, before the Advent crowds.</div>
     </div>
   </section>
 
   <section id="markets">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter r pop" data-say="Glühwein time!|Mit Schuss?|Cosy!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter l tall" data-say="Kölsch!|Prost!|Small glass, big love" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>The markets</h2>
-      <p class="lead narrow">Saturday in Düsseldorf, Sunday in Cologne. All free to enter.</p>
-      <h3>Saturday: Düsseldorf</h3>
+      <p class="kicker rv">Stalls, lights, Glühwein</p>
+      <h2 class="rv">The markets</h2>
+      <p class="lead narrow rv">Saturday in Düsseldorf, Sunday in Cologne. All free to enter.</p>
+      <h3 class="city-h rv"><span class="day-pill">Saturday</span>Düsseldorf</h3>
       <p class="muted">All inner-city markets run <a href="https://www.visitduesseldorf.de/erleben/veranstaltungen/Weihnachtsmarkt">19 November to 30 December 2026</a>, Saturdays 11:00-21:00. Everything below is within about 15 minutes' walk.</p>
       <div class="tbl"><table>
         <thead><tr><th>Market</th><th>Where</th><th>Why go</th></tr></thead>
@@ -293,7 +875,8 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
           <tr><td class="k">Winter Village on the Kö</td><td>Königsallee</td><td>Announced as new for 2026, not confirmed by the city yet. Check on the day.</td></tr>
         </tbody>
       </table></div>
-      <h3>Sunday: Cologne</h3>
+      <div class="cr-row" aria-hidden="true"><div class="lights" aria-hidden="true"></div><div class="critter r wide bounce" data-say="Senf!|Bratwurst lane!|*wink*" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div></div>
+      <h3 class="city-h rv"><span class="day-pill sun">Sunday</span>Cologne</h3>
       <div class="tbl"><table>
         <thead><tr><th>Market</th><th>Dates 2026</th><th>Sunday</th><th>Why go</th></tr></thead>
         <tbody>
@@ -307,22 +890,51 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
   </section>
 
   <section id="do">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter l wide" data-say="Pick me!|Snack break?|Lecker!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter r tumble" data-say="Hot stuff!|Prost!|Another round?" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>Things to do</h2>
-      <p class="lead narrow">At least three options per kind of fun. Saturday picks are in Düsseldorf; anything marked Sunday is in Cologne.</p>
+      <p class="kicker rv">Pick your fun</p>
+      <h2 class="rv">Things to do</h2>
+      <p class="lead narrow rv">At least three options per kind of fun. Saturday picks are in Düsseldorf; anything marked Sunday is in Cologne.</p>
       <div class="tabs" role="tablist" aria-label="Activities" id="tabs"></div>
       <div id="panels"></div>
     </div>
   </section>
 
-  <section id="plan">
+  <section id="prost" class="band pine prost" aria-label="Altbier versus Kölsch">
+    <div class="critter alt l pop" data-say="Team Alt!|Dark and proud|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 110 150"><use href="#s-alt"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter r tall tumble" data-say="Team Kölsch!|Kölle Alaaf!|Stange up!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>Sample plan</h2>
-      <p class="lead narrow">Park once in Düsseldorf and walk or take the U-Bahn all Saturday. Sunday, drive 40 to 50 minutes to Cologne, do the markets, and head home from there.</p>
+      <p class="kicker rv" style="justify-content:center">The great rivalry</p>
+      <h2 class="rv">Alt or Kölsch?</h2>
+      <p class="lead rv">Altbier in the Altstadt on Saturday, Kölsch at Früh am Dom on Sunday. Settle Alt versus Kölsch once and for all.</p>
+      <div class="stage" id="stage" aria-hidden="true">
+        <div class="burst">
+          <svg viewBox="0 0 180 180"><path d="M90 6l13 38 36-20-12 39 41 4-35 22 30 28-41-3 6 41-34-24-4 42-17-38-27 31 1-41-40 9 28-30-38-16 40-11-22-35 40 9z" fill="#F2C14E" stroke="#7A0A1C" stroke-width="4" stroke-linejoin="round"/></svg>
+          <b>Prost!</b>
+        </div>
+        <i class="drop d1"></i><i class="drop d2"></i><i class="drop d3"></i><i class="drop d4"></i><i class="drop d5"></i>
+        <div class="glass alt"><svg viewBox="0 0 110 150"><use href="#s-alt"/></svg><span>Altbier</span></div>
+        <div class="glass kol"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg><span>Kölsch</span></div>
+      </div>
+      <p class="verdict-line">Scroll to clink. Verdict due Sunday, 13:00.</p>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter r bounce" data-say="Schedule? Glühwein.|Warm hands!|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter l wide pop" data-say="Bratwurst o'clock!|*wink*|Mustard? Always." aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div>
+    <div class="wrap">
+      <p class="kicker rv">Hour by hour</p>
+      <h2 class="rv">Sample plan</h2>
+      <p class="lead narrow rv">Park once in Düsseldorf and walk or take the U-Bahn all Saturday. Sunday, drive 40 to 50 minutes to Cologne, do the markets, and head home from there.</p>
+      <div class="cr-row" aria-hidden="true"><div class="lights" aria-hidden="true"></div><div class="critter r tall" data-say="Früh am Dom!|Small glass, big love|Noch eins?" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div></div>
       <div class="days">
-        <div class="day">
-          <h3>Saturday <small class="muted">Düsseldorf</small></h3>
-          <ol class="tl">
+        <div class="day rv">
+          <div class="day-head"><h3>Saturday</h3><small>Düsseldorf</small></div>
+          <ol class="tl stagger">
             <li><time>07:30</time>Leave Rotterdam, about 2 to 2.5 hours. Park at the stay or a garage, drop bags if the host allows.</li>
             <li><time>10:30-13:00</time>Königsallee, Kö-Bogen and Schadowstraße: the fashion stretch for Kiara, Liz and Mike, Libeskind architecture for Giamo.</li>
             <li><time>13:00-14:30</time>Altbier lunch in the Altstadt: Uerige, Füchschen or Schumacher.</li>
@@ -333,9 +945,9 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
             <li><time>23:30 onwards</time>Glüh Dich Glücklich at the Kasematten, then THEGATE or Cube.</li>
           </ol>
         </div>
-        <div class="day">
-          <h3>Sunday <small class="muted">Cologne</small></h3>
-          <ol class="tl">
+        <div class="day rv">
+          <div class="day-head"><h3>Sunday</h3><small>Cologne</small></div>
+          <ol class="tl stagger">
             <li><time>09:30-10:30</time>Brunch and check out.</li>
             <li><time>10:30</time>Drive to Cologne, about 40 km. Park in Deutz (Lanxess Arena) and walk over the Hohenzollern Bridge for the Dom view, or use a central garage.</li>
             <li><time>11:30-13:00</time>Dom market, just after the 11:00 opening.</li>
@@ -349,10 +961,15 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
   </section>
 
   <section id="stay">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter l tumble" data-say="Sweet dreams!|Cosy night|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter r tall pop" data-say="Gute Nacht!|Prost!|One more?" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>Where to stay in Düsseldorf</h2>
-      <p class="lead narrow">One night, Saturday to Sunday. Staying near the Altstadt means walking home from the clubs; staying a few U-Bahn stops out means easier, cheaper parking.</p>
-      <div class="pick">
+      <p class="kicker rv">Saturday night</p>
+      <h2 class="rv">Where to stay in Düsseldorf</h2>
+      <p class="lead narrow rv">One night, Saturday to Sunday. Staying near the Altstadt means walking home from the clubs; staying a few U-Bahn stops out means easier, cheaper parking.</p>
+      <div class="pick rv">
+        <span class="sticker" aria-hidden="true">top pick</span>
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg></div>
         <div>
           <h3><a href="https://www.airbnb.com/rooms/1186786481324337200">2 bedrooms in city location, NEW</a></h3>
@@ -365,6 +982,7 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
         <li><a href="https://www.airbnb.com/rooms/754097318618886256"><b>Dusseldorf Old Town 2 Room Apartment</b></a> on the Burgplatz: 5 guests, 2 bedrooms, 4.58 from 45 reviews. The host suggests the free P+R Südfriedhof (6 stops on the U72) or the Contipark Altstadt Rheinufer garage.</li>
         <li><a href="https://www.airbnb.de/rooms/10679190"><b>Im Herzen der D-Altstadt (2)</b></a>: 4 guests, 2 bedrooms each with a 180 cm double, 61 reviews. No parking info in the listing, so plan on a garage.</li>
       </ul>
+      <div class="cr-row" aria-hidden="true"><div class="lights" aria-hidden="true"></div><div class="critter alt l bounce" data-say="Walk home!|Altstadt, baby|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 110 150"><use href="#s-alt"/></svg></div></div><span class="bubble"></span></div></div>
       <div class="tbl"><table>
         <thead><tr><th>Area</th><th>To the Altstadt</th><th>Parking</th><th>Good for</th></tr></thead>
         <tbody>
@@ -379,132 +997,310 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
   </section>
 
   <section id="drive">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter r wide tumble" data-say="Road snack?|Drive safe!|*wink*" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter alt l pop" data-say="Prost, Giamo!|Mine's a Glühwein|Drive safe!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 110 150"><use href="#s-alt"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap narrow">
-      <h2>Driving and parking</h2>
-      <p>Rotterdam to Düsseldorf is about 230 km and 2 to 2.5 hours. Düsseldorf to Cologne is about 40 km and 40 to 50 minutes. Cologne back to Rotterdam is about 260 km and 2.5 to 3 hours.</p>
-      <div class="note"><b>Green sticker required in both cities.</b> Düsseldorf and Cologne both have low-emission zones that need a green Umweltplakette, Dutch plates included. The fine is <a href="https://tyremap.com/de/emission-zones/dusseldorf/">€100</a>. Order one online or from TÜV/Dekra and allow a few days for delivery.</div>
-      <h3>Parking</h3>
+      <p class="kicker rv">On the road</p>
+      <h2 class="rv">Driving and parking</h2>
+
+      <div class="driver-card rv">
+        <svg class="wheel-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M3.5 10.5h6M14.5 10.5h6M12 14.5V21"/></svg>
+        <div>
+          <p class="tagline">Designated driver</p>
+          <h3>Giamo drives the whole trip</h3>
+          <p>Rotterdam to Düsseldorf, Düsseldorf to Cologne, and Cologne home. No driver to pick. The German limit is 0.5 per mille (0.0 for new drivers), and late drinks can still count on Sunday morning, so Giamo takes it easy on Saturday night. The rest of us will raise an Altbier for Giamo.</p>
+        </div>
+      </div>
+
+      <div class="route" id="route">
+        <div class="road" id="road">
+          <span class="stopdot" style="left:0%"></span><span class="stopdot" style="left:33.33%"></span><span class="stopdot" style="left:66.66%"></span><span class="stopdot" style="left:100%"></span>
+          <span class="stoplbl first" style="left:0%">Rotterdam</span><span class="stoplbl" style="left:33.33%">Düsseldorf</span><span class="stoplbl" style="left:66.66%">Cologne</span><span class="stoplbl last" style="left:100%">Home</span>
+          <div class="car" id="car" aria-hidden="true">
+            <svg viewBox="0 0 120 64">
+              <path d="M30 18l-2-10 14 2 6 8" fill="#C8102E" stroke="#3B0A10" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="27" cy="7" r="4" fill="#FFF4E2" stroke="#3B0A10" stroke-width="2"/>
+              <path d="M8 46V34c0-6 4-10 10-11l14-2 12-12c3-3 6-4 10-4h22c5 0 9 2 12 6l10 12 10 2c5 1 8 5 8 10v11Z" fill="#C8102E" stroke="#3B0A10" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M42 22l10-10c2-2 4-3 7-3h8v13Z M71 22V9h8c3 0 5 1 7 3l8 10Z" fill="#CFE8F2" stroke="#3B0A10" stroke-width="2.5" stroke-linejoin="round"/>
+              <circle cx="60" cy="16" r="5" fill="#F2C9A8" stroke="#3B0A10" stroke-width="1.8"/>
+              <path d="M54 13c1-6 9-7 12-2l3-3-1 6Z" fill="#C8102E" stroke="#3B0A10" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="69" cy="8" r="2.4" fill="#FFF4E2"/>
+              <rect x="104" y="32" width="10" height="5" rx="2" fill="#FFD36B" stroke="#3B0A10" stroke-width="1.5"/>
+              <path d="M10 33h8" stroke="#FFF4E2" stroke-width="3" stroke-linecap="round"/>
+              <path d="M20 30c20 2 60 2 86 0" fill="none" stroke="#F2C14E" stroke-width="2.5"/>
+              <g class="wh" id="wh1"><circle cx="30" cy="48" r="10" fill="#2A0A0E"/><circle cx="30" cy="48" r="4.5" fill="#E8E0D6"/><path d="M30 38.5v19M20.5 48h19" stroke="#E8E0D6" stroke-width="1.6"/></g>
+              <g class="wh" id="wh2"><circle cx="92" cy="48" r="10" fill="#2A0A0E"/><circle cx="92" cy="48" r="4.5" fill="#E8E0D6"/><path d="M92 38.5v19M82.5 48h19" stroke="#E8E0D6" stroke-width="1.6"/></g>
+            </svg>
+          </div>
+        </div>
+        <ol class="legs" id="legs">
+          <li><span class="ln">1</span><span><span class="chip">Sat</span><b>Rotterdam to Düsseldorf</b> is about 230 km and 2 to 2.5 hours.</span></li>
+          <li><span class="ln">2</span><span><span class="chip sun">Sun</span><b>Düsseldorf to Cologne</b> is about 40 km and 40 to 50 minutes.</span></li>
+          <li><span class="ln">3</span><span><span class="chip sun">Sun</span><b>Cologne back to Rotterdam</b> is about 260 km and 2.5 to 3 hours.</span></li>
+        </ol>
+      </div>
+
+      <div class="note rv"><b>Green sticker required in both cities.</b> Düsseldorf and Cologne both have low-emission zones that need a green Umweltplakette, Dutch plates included. The fine is <a href="https://tyremap.com/de/emission-zones/dusseldorf/">€100</a>. Order one online or from TÜV/Dekra and allow a few days for delivery.</div>
+      <div class="cr-row" aria-hidden="true"><div class="lights" aria-hidden="true"></div><div class="critter r pop" data-say="Not for Giamo!|Mine, then|Warm hands!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div></div>
+      <h3 class="rv">Parking</h3>
       <ul class="clean">
         <li><b>Düsseldorf, Saturday:</b> at the stay if it has a spot, otherwise a garage such as Contipark Altstadt Rheinufer, or the free P+R Südfriedhof with the U72 into town. (The free Provinzial garage deal is only on 5, 12 and 19 December.)</li>
         <li><b>Cologne, Sunday:</b> the Dom, Hauptbahnhof, Philharmonie and Groß St. Martin garages sit right by the markets (<a href="https://www.koeln.de/weihnachten/weihnachtsmaerkte-koeln/weihnachtsmarkt-am-koelner-dom/">koeln.de</a>) but fill up on Advent weekends. The city suggests the edge of the centre or the Lanxess Arena in Deutz (<a href="https://www.stadt-koeln.de/leben-in-koeln/verkehr/parken/parken-rund-um-die-uhr">Stadt Köln</a>), which gives you the bridge walk too.</li>
       </ul>
-      <p class="muted">Pick Sunday's driver before Saturday night: the limit is 0.5 per mille in Germany (0.0 for new drivers), and alcohol from a late night can still count the next morning.</p>
     </div>
   </section>
 
   <section id="check">
+    <div class="lights" aria-hidden="true"></div>
+    <div class="critter l tall bounce" data-say="Checked!|Facts and Kölsch|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 80 176"><use href="#s-kol"/></svg></div></div><span class="bubble"></span></div>
+    <div class="critter r wide tumble" data-say="All checked?|*wink*|Lecker!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 176 104"><use href="#s-wurst"/></svg></div></div><span class="bubble"></span></div>
     <div class="wrap">
-      <h2>Fact check</h2>
-      <p class="lead narrow">Key facts re-checked on 10 November 2026 against official sources where they exist.</p>
+      <p class="kicker rv">Double-checked</p>
+      <h2 class="rv">Fact check</h2>
+      <p class="lead narrow rv">Key facts re-checked on 10 November 2026 against official sources where they exist.</p>
       <div class="tbl"><table>
         <thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead>
         <tbody>
-          <tr><td>Düsseldorf markets 19 Nov to 30 Dec 2026</td><td class="ok">Confirmed</td><td><a href="https://www.visitduesseldorf.de/event/duesseldorfer-weihnachtsmarkt-c632015b44">Visit Düsseldorf</a></td></tr>
-          <tr><td>Düsseldorf Sat 11:00-21:00, closed Sun 22 Nov</td><td class="warn">One source, citing official pages</td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
-          <tr><td>Wheel of Vision 55 m, 42 gondolas, max 8 per gondola</td><td class="warn">One source, citing official pages</td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
-          <tr><td>Corneliusplatz ice rink hours and prices</td><td class="warn">2025 hours only</td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
-          <tr><td>Cologne Dom market 16 Nov to 23 Dec, Sun 11:00-21:00</td><td class="ok">Confirmed</td><td><a href="https://www.koeln.de/weihnachten/weihnachtsmaerkte-koeln/weihnachtsmarkt-am-koelner-dom/">koeln.de</a></td></tr>
-          <tr><td>Heinzels (ice rink) from 23 Nov, daily 11:00-22:00</td><td class="ok">Confirmed</td><td><a href="https://www.heinzels-wintermaerchen.de/fr/informations-generales/">Heinzels official</a></td></tr>
-          <tr><td>Nine one-star Michelin restaurants in Düsseldorf, 2026</td><td class="ok">Confirmed</td><td><a href="https://www.visitduesseldorf.de/business/kontakt/medienservice/pressemitteilungen/drei-kulinarische-welten-neun-michelin-sterne">Visit Düsseldorf</a></td></tr>
-          <tr><td>Airbnb 1186786481324337200: 4 guests, 4.8 from 74, street parking</td><td class="ok">Confirmed (listing)</td><td><a href="https://www.airbnb.com/rooms/1186786481324337200">Airbnb</a></td></tr>
-          <tr><td>Other two Airbnbs</td><td class="warn">From search results only</td><td>Airbnb</td></tr>
-          <tr><td>Green sticker in both cities, €100 fine</td><td class="ok">Confirmed</td><td><a href="https://tyremap.com/de/emission-zones/dusseldorf/">Tyremap</a></td></tr>
-          <tr><td>Düsseldorf's Catz Café has closed</td><td class="ok">Confirmed by several listings</td><td><a href="https://www.happycow.net/reviews/catz-cafe-dusseldorf-160621">HappyCow</a></td></tr>
-          <tr><td>Café Schnurrke (Cologne) still open on Sundays</td><td class="warn">Not confirmed</td><td><a href="https://www.speisekarte.de/k%C3%B6ln/restaurant/cafe_schnurrke">speisekarte.de</a></td></tr>
-          <tr><td>Clubs and party series (THEGATE, Cube, TechnoStube)</td><td class="warn">2024 guide, check line-ups</td><td><a href="https://lifeinduesseldorf.com/best-electronic-music/">Life in Düsseldorf</a></td></tr>
+          <tr><td>Düsseldorf markets 19 Nov to 30 Dec 2026</td><td class="ok"><span>Confirmed</span></td><td><a href="https://www.visitduesseldorf.de/event/duesseldorfer-weihnachtsmarkt-c632015b44">Visit Düsseldorf</a></td></tr>
+          <tr><td>Düsseldorf Sat 11:00-21:00, closed Sun 22 Nov</td><td class="warn"><span>One source, citing official pages</span></td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
+          <tr><td>Wheel of Vision 55 m, 42 gondolas, max 8 per gondola</td><td class="warn"><span>One source, citing official pages</span></td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
+          <tr><td>Corneliusplatz ice rink hours and prices</td><td class="warn"><span>2025 hours only</span></td><td><a href="https://pixidia.com/de/weihnachtsmarkt-duesseldorf-2026/">Pixidia</a></td></tr>
+          <tr><td>Cologne Dom market 16 Nov to 23 Dec, Sun 11:00-21:00</td><td class="ok"><span>Confirmed</span></td><td><a href="https://www.koeln.de/weihnachten/weihnachtsmaerkte-koeln/weihnachtsmarkt-am-koelner-dom/">koeln.de</a></td></tr>
+          <tr><td>Heinzels (ice rink) from 23 Nov, daily 11:00-22:00</td><td class="ok"><span>Confirmed</span></td><td><a href="https://www.heinzels-wintermaerchen.de/fr/informations-generales/">Heinzels official</a></td></tr>
+          <tr><td>Nine one-star Michelin restaurants in Düsseldorf, 2026</td><td class="ok"><span>Confirmed</span></td><td><a href="https://www.visitduesseldorf.de/business/kontakt/medienservice/pressemitteilungen/drei-kulinarische-welten-neun-michelin-sterne">Visit Düsseldorf</a></td></tr>
+          <tr><td>Airbnb 1186786481324337200: 4 guests, 4.8 from 74, street parking</td><td class="ok"><span>Confirmed (listing)</span></td><td><a href="https://www.airbnb.com/rooms/1186786481324337200">Airbnb</a></td></tr>
+          <tr><td>Other two Airbnbs</td><td class="warn"><span>From search results only</span></td><td>Airbnb</td></tr>
+          <tr><td>Green sticker in both cities, €100 fine</td><td class="ok"><span>Confirmed</span></td><td><a href="https://tyremap.com/de/emission-zones/dusseldorf/">Tyremap</a></td></tr>
+          <tr><td>Düsseldorf's Catz Café has closed</td><td class="ok"><span>Confirmed by several listings</span></td><td><a href="https://www.happycow.net/reviews/catz-cafe-dusseldorf-160621">HappyCow</a></td></tr>
+          <tr><td>Café Schnurrke (Cologne) still open on Sundays</td><td class="warn"><span>Not confirmed</span></td><td><a href="https://www.speisekarte.de/k%C3%B6ln/restaurant/cafe_schnurrke">speisekarte.de</a></td></tr>
+          <tr><td>Clubs and party series (THEGATE, Cube, TechnoStube)</td><td class="warn"><span>2024 guide, check line-ups</span></td><td><a href="https://lifeinduesseldorf.com/best-electronic-music/">Life in Düsseldorf</a></td></tr>
         </tbody>
       </table></div>
-      <h3>Before we go</h3>
+      <div class="cr-row" aria-hidden="true"><div class="lights" aria-hidden="true"></div><div class="critter l pop" data-say="Tick tick tick!|All set?|Prost!" aria-hidden="true"><div class="cr-tilt"><div class="cr-in"><svg viewBox="0 0 124 140"><use href="#s-mug"/></svg></div></div><span class="bubble"></span></div></div>
+      <h3 class="rv">Before we go</h3>
       <ul class="check" id="todo">
-        <li><label><input type="checkbox" data-k="dus-a"><span>Book the Düsseldorf Airbnb for 28-29 November</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-b"><span>Reserve dinner for 4 (Saturday night)</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-c"><span>Check club line-ups for 28 Nov on ra.co</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-d"><span>Green Umweltplakette ordered and on the windscreen</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-e"><span>Pick Sunday's driver</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-f"><span>Call Café Schnurrke to check Sunday opening (for Liz)</span></label></li>
-        <li><label><input type="checkbox" data-k="dus-g"><span>Cologne Dom tickets online, if we want to go inside</span></label></li>
+        <li class="fixed"><div class="lbl"><span class="tk" aria-hidden="true"></span><span>Driver sorted: Giamo drives the whole weekend</span><small>done</small></div></li>
+        <li><label><input type="checkbox" id="todo-dus-a" data-k="dus-a"><span>Book the Düsseldorf Airbnb for 28-29 November</span></label></li>
+        <li><label><input type="checkbox" id="todo-dus-b" data-k="dus-b"><span>Reserve dinner for 4 (Saturday night)</span></label></li>
+        <li><label><input type="checkbox" id="todo-dus-c" data-k="dus-c"><span>Check club line-ups for 28 Nov on ra.co</span></label></li>
+        <li><label><input type="checkbox" id="todo-dus-d" data-k="dus-d"><span>Green Umweltplakette ordered and on the windscreen</span></label></li>
+        <li><label><input type="checkbox" id="todo-dus-f" data-k="dus-f"><span>Call Café Schnurrke to check Sunday opening (for Liz)</span></label></li>
+        <li><label><input type="checkbox" id="todo-dus-g" data-k="dus-g"><span>Cologne Dom tickets online, if we want to go inside</span></label></li>
       </ul>
+      <div class="progress"><div class="cane-track"><div class="cane" id="cane"></div></div><p id="progTxt" aria-live="polite">0 of 6 ready</p></div>
       <p class="muted">Ticks are saved in your own browser only.</p>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">Made for Giamo, Kiara, Liz and Mike. Facts as of 10 November 2026; opening times can change, so check official sites the week before. Prost and Kölle Alaaf!</div>
+<footer class="band" id="foot">
+  <div class="wrap">
+    <div class="gang" aria-hidden="true">
+      <div><svg viewBox="0 0 124 140" style="width:clamp(58px,9vw,84px)"><use href="#s-mug"/></svg></div>
+      <div><svg viewBox="0 0 110 150" style="width:clamp(54px,8vw,78px)"><use href="#s-alt"/></svg></div>
+      <div><svg viewBox="0 0 80 176" style="width:clamp(36px,5vw,50px)"><use href="#s-kol"/></svg></div>
+      <div><svg viewBox="0 0 176 104" style="width:clamp(84px,12vw,124px)"><use href="#s-wurst"/></svg></div>
+    </div>
+    <p class="big">Prost and Kölle Alaaf!</p>
+    <p>Made for Giamo, Kiara, Liz and Mike. Facts as of 10 November 2026; opening times can change, so check official sites the week before.</p>
+  </div>
 </footer>
+</div>
 
 <script>
 (function(){
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const root = document.documentElement;
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+  var hasIO = 'IntersectionObserver' in window;
+  var CONFETTI = ['#C8102E', '#F2C14E', '#1E6B48', '#FFF4E2', '#FF8FA0'];
+
+  function clamp(v, a, b){ return v < a ? a : (v > b ? b : v); }
+
+  /* confetti burst at a viewport point */
+  function confetti(x, y, n){
+    if (reduce || !Element.prototype.animate) return;
+    for (var i = 0; i < n; i++){
+      var s = document.createElement('i');
+      s.className = 'cf';
+      s.style.background = CONFETTI[i % CONFETTI.length];
+      if (i % 3 === 0) s.style.borderRadius = '50%';
+      document.body.appendChild(s);
+      var a = Math.random() * Math.PI * 2, d = 50 + Math.random() * 110;
+      var dx = Math.cos(a) * d, dy = Math.sin(a) * d - 40;
+      var anim = s.animate([
+        {transform:'translate(' + x + 'px,' + y + 'px) rotate(0deg)', opacity:1},
+        {transform:'translate(' + (x + dx) + 'px,' + (y + dy) + 'px) rotate(' + (Math.random() * 360) + 'deg)', opacity:1, offset:.55},
+        {transform:'translate(' + (x + dx * 1.2) + 'px,' + (y + dy + 120) + 'px) rotate(' + (Math.random() * 720) + 'deg)', opacity:0}
+      ], {duration:1100 + Math.random() * 600, easing:'cubic-bezier(.2,.7,.3,1)'});
+      anim.onfinish = (function(el){ return function(){ el.remove(); }; })(s);
+    }
+  }
+  function confettiAt(el, n){
+    var r = el.getBoundingClientRect();
+    confetti(r.left + r.width / 2, r.top + r.height / 3, n);
+  }
 
   /* theme: remember choice, circular reveal via View Transitions */
-  try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') root.dataset.theme = t; } catch(e){}
-  const btn = document.getElementById('themeBtn');
+  var btn = document.getElementById('themeBtn');
   function isDark(){
     if (root.dataset.theme) return root.dataset.theme === 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
   btn.addEventListener('click', function(){
-    const next = isDark() ? 'light' : 'dark';
-    const apply = function(){ root.dataset.theme = next; try { localStorage.setItem('theme', next); } catch(e){} };
-    if (!document.startViewTransition || reduce) { apply(); return; }
-    const r = btn.getBoundingClientRect();
-    const x = r.left + r.width/2, y = r.top + r.height/2;
-    const end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-    const vt = document.startViewTransition(apply);
+    var next = isDark() ? 'light' : 'dark';
+    var apply = function(){ root.dataset.theme = next; try { localStorage.setItem('theme', next); } catch(e){} };
+    if (!document.startViewTransition || reduce){ apply(); return; }
+    var r = btn.getBoundingClientRect();
+    var x = r.left + r.width / 2, y = r.top + r.height / 2;
+    var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    var vt = document.startViewTransition(apply);
     vt.ready.then(function(){
-      root.animate({clipPath:['circle(0px at '+x+'px '+y+'px)','circle('+end+'px at '+x+'px '+y+'px)']},
-        {duration:650,easing:'cubic-bezier(.4,0,.2,1)',pseudoElement:'::view-transition-new(root)'});
+      root.animate({clipPath:['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + end + 'px at ' + x + 'px ' + y + 'px)']},
+        {duration:650, easing:'cubic-bezier(.4,0,.2,1)', pseudoElement:'::view-transition-new(root)'});
     }).catch(function(){});
   });
 
   /* garland progress: bulbs light up as you scroll */
-  const g = document.getElementById('garland');
-  const N = 28; let bulbs = [];
+  var g = document.getElementById('garland');
+  var bulbs = [], N = 28;
   function drawGarland(){
-    const w = g.clientWidth || innerWidth; g.setAttribute('viewBox','0 0 '+w+' 14');
-    let d = 'M0 2'; const step = w / N;
-    for (let i = 0; i < N; i++) d += ' Q'+(i*step+step/2)+' 10 '+((i+1)*step)+' 2';
-    let html = '<path class="wire" d="'+d+'"/>';
-    for (let i = 0; i < N; i++) html += '<circle class="bulb'+(i%3===1?' r':'')+'" cx="'+(i*step+step/2)+'" cy="7.5" r="3"/>';
-    g.innerHTML = html; bulbs = Array.from(g.querySelectorAll('.bulb')); lightGarland();
+    var w = g.clientWidth || innerWidth;
+    N = w < 600 ? 16 : 28;
+    g.setAttribute('viewBox', '0 0 ' + w + ' 16');
+    var d = 'M0 2', step = w / N, i;
+    for (i = 0; i < N; i++) d += ' Q' + (i * step + step / 2) + ' 12 ' + ((i + 1) * step) + ' 2';
+    var html = '<path class="wire" d="' + d + '"/>';
+    for (i = 0; i < N; i++) html += '<circle class="bulb' + (i % 3 === 1 ? ' r' : (i % 3 === 2 ? ' g' : '')) + '" cx="' + (i * step + step / 2) + '" cy="8.5" r="3.2"/>';
+    g.innerHTML = html;
+    bulbs = Array.prototype.slice.call(g.querySelectorAll('.bulb'));
+    lightGarland();
   }
   function lightGarland(){
-    const max = document.documentElement.scrollHeight - innerHeight;
-    const p = max > 0 ? scrollY / max : 0;
-    const lit = Math.round(p * N);
-    bulbs.forEach(function(b,i){ b.classList.toggle('on', i < lit); });
+    var max = document.documentElement.scrollHeight - innerHeight;
+    var p = max > 0 ? scrollY / max : 0;
+    var lit = Math.round(p * N);
+    for (var i = 0; i < bulbs.length; i++) bulbs[i].classList.toggle('on', i < lit);
   }
-  drawGarland();
-  addEventListener('resize', drawGarland);
-  addEventListener('scroll', lightGarland, {passive:true});
+
+  /* hero string lights */
+  var hl = document.getElementById('heroLights');
+  function drawLights(){
+    var w = hl.clientWidth || innerWidth;
+    var n = Math.max(7, Math.round(w / 70));
+    hl.setAttribute('viewBox', '0 0 ' + w + ' 56');
+    var step = w / n, d = 'M0 4', html = '', cols = ['#FFD36B', '#FFF4E2', '#7CF0A9', '#FFB0BE'];
+    for (var i = 0; i < n; i++) d += ' Q' + (i * step + step / 2) + ' 30 ' + ((i + 1) * step) + ' 4';
+    html += '<path class="wire" d="' + d + '"/>';
+    for (var j = 0; j < n; j++){
+      var cx = j * step + step / 2, cy = 17;
+      var c = cols[j % cols.length];
+      html += '<g><rect class="cap" x="' + (cx - 3) + '" y="' + (cy - 2) + '" width="6" height="5" rx="1"/>' +
+        '<ellipse class="lb" style="animation-delay:' + (-(j * 0.37) % 2.8).toFixed(2) + 's;filter:drop-shadow(0 0 6px ' + c + ')" cx="' + cx + '" cy="' + (cy + 10) + '" rx="5" ry="7.5" fill="' + c + '"/></g>';
+    }
+    hl.innerHTML = html;
+  }
+
+  /* sagging strings of bulbs at section seams and in the breathing rows */
+  var LCOLS = ['#FF3B5C', '#FFC94D', '#3DDC97', '#FFF1C1'];
+  var lightEls = Array.prototype.slice.call(document.querySelectorAll('.lights'));
+  function buildLights(el){
+    var w = el.clientWidth; if (!w || el._w === w) return; el._w = w;
+    var sag = 14, gap = 42, span = w < 500 ? w : 320, y0 = 3;
+    var segs = Math.max(1, Math.round(w / span)), segW = w / segs;
+    var d = '', html = '', idx = 0;
+    for (var s = 0; s < segs; s++){
+      var x0 = s * segW;
+      d += 'M' + x0.toFixed(1) + ' ' + y0 + ' Q' + (x0 + segW / 2).toFixed(1) + ' ' + (y0 + sag * 2) + ' ' + (x0 + segW).toFixed(1) + ' ' + y0 + ' ';
+      var n = Math.max(3, Math.round(segW / gap));
+      for (var i = 1; i < n; i++){
+        var t = i / n, x = x0 + segW * t, y = y0 + 4 * sag * t * (1 - t);
+        var ang = Math.atan(4 * sag * (1 - 2 * t) / segW) * 180 / Math.PI;
+        html += '<span class="sl" style="left:' + x.toFixed(1) + 'px;top:' + y.toFixed(1) + 'px;--c:' + LCOLS[idx % 4] + ';--dl:-' + (((idx * 37) % 23) / 10) + 's;--t:' + (1.6 + ((idx * 13) % 17) / 10) + 's;transform:rotate(' + ang.toFixed(1) + 'deg)"></span>';
+        idx++;
+      }
+    }
+    el.innerHTML = '<svg viewBox="0 0 ' + w + ' 46" preserveAspectRatio="none"><path class="wire" d="' + d + '"/></svg>' + html;
+  }
+  lightEls.forEach(buildLights);
+  if (hasIO){
+    var lio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ e.target.classList.toggle('lit', e.isIntersecting); });
+    }, {rootMargin:'40px 0px'});
+    lightEls.forEach(function(el){ lio.observe(el); });
+  }
+
+  /* hero foreground: market stalls with glowing counters and a decorated tree with a star */
+  (function(){
+    var huts = [[20,1],[150,.9],[280,1.05],[410,.9],[548,.82],[816,.84],[930,.98],[1062,.9],[1185,1.04],[1320,.94]];
+    var s = '', k = 0;
+    huts.forEach(function(hu){
+      var b = '';
+      [.2, .4, .6, .8].forEach(function(tt){
+        b += '<circle class="fl" cx="' + (-10 + 58 * tt).toFixed(1) + '" cy="' + (-50 - 44 * tt).toFixed(1) + '" r="3" fill="' + LCOLS[k % 4] + '" style="--dl:-' + ((k * 7) % 13 / 10) + 's;--t:' + (1.4 + (k % 5) / 5) + 's"/>'; k++;
+        b += '<circle class="fl" cx="' + (48 + 58 * tt).toFixed(1) + '" cy="' + (-94 + 44 * tt).toFixed(1) + '" r="3" fill="' + LCOLS[k % 4] + '" style="--dl:-' + ((k * 7) % 13 / 10) + 's;--t:' + (1.4 + (k % 5) / 5) + 's"/>'; k++;
+      });
+      s += '<g transform="translate(' + hu[0] + ' 404) scale(' + hu[1] + ')">' +
+        '<rect class="fr-dark" x="0" y="-52" width="96" height="52"/>' +
+        '<rect x="10" y="-44" width="76" height="22" rx="2" fill="url(#g-counter)" opacity=".95"/>' +
+        '<path d="M22 -44v22M48 -44v22M74 -44v22" stroke="#5A0715" stroke-width="2" opacity=".35"/>' +
+        '<path class="fr-roof" d="M-10 -50L48 -94L106 -50Z"/>' +
+        '<path class="fr-awn" d="M-6 -50' + 'q6 9 12 0'.repeat(9) + 'Z"/>' +
+        '<path class="fr-snow" d="M-13 -48L48 -97L109 -48L99 -50L48 -87L-3 -50Z"/>' + b + '</g>';
+    });
+    var tree = '<g transform="translate(720 408)">' +
+      '<rect x="-7" y="-14" width="14" height="16" fill="#3A1C0C"/>' +
+      '<path class="fr-tree" d="M0 -150L-40 -95H-22L-58 -45H-34L-74 -6H74L34 -45H58L22 -95H40Z"/>' +
+      '<path class="fr-tree2" d="M0 -150L-20 -122L0 -112L14 -126Z" opacity=".7"/>' +
+      '<path d="M-30 -100q30 14 52 -4M-48 -52q44 18 90 -6M-62 -14q60 18 122 -6" fill="none" stroke="#FFC94D" stroke-width="1.8" opacity=".7"/>';
+    [[-18,-110],[16,-104],[-34,-68],[0,-62],[34,-72],[-50,-24],[-16,-18],[22,-20],[54,-26],[-4,-90]].forEach(function(p, i){
+      tree += '<circle class="fl" cx="' + p[0] + '" cy="' + p[1] + '" r="' + (i % 3 === 0 ? 4.5 : 3.4) + '" fill="' + LCOLS[i % 4] + '" style="--dl:-' + (i * .37).toFixed(2) + 's;--t:' + (1.2 + (i % 4) * .3) + 's"/>';
+    });
+    tree += '<circle class="star-glow" cx="0" cy="-156" r="28"/>' +
+      '<g transform="translate(0 -156)"><path class="star" d="M0 -13L3.2 -4.4L12.4 -4L5.2 1.7L7.6 10.5L0 5.4L-7.6 10.5L-5.2 1.7L-12.4 -4L-3.2 -4.4Z"/></g></g>';
+    s += tree + '<path class="fr-drift" d="M0 420V404C160 392 300 416 480 402S820 388 1000 400 1300 414 1440 398V450H0Z"/>';
+    document.getElementById('fore').innerHTML = s;
+  })();
 
   /* advent doors */
-  document.querySelectorAll('.door').forEach(function(door){
-    const front = door.querySelector('.door-front');
+  var doors = document.querySelectorAll('.door');
+  Array.prototype.forEach.call(doors, function(door){
+    var front = door.querySelector('.door-front');
     front.addEventListener('click', function(){
-      const open = door.classList.toggle('open');
-      front.setAttribute('aria-expanded', open);
+      var open = door.classList.toggle('open');
+      front.setAttribute('aria-expanded', String(open));
+      if (open && door.classList.contains('best')) confettiAt(door, 26);
     });
   });
-  const best = document.getElementById('bestDoor');
-  const io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting){ setTimeout(function(){ best.classList.add('open'); best.querySelector('.door-front').setAttribute('aria-expanded','true'); }, reduce ? 0 : 500); io.disconnect(); } });
-  }, {threshold:.6});
-  io.observe(best);
+  /* the confirmed door starts open; when it scrolls into view the CONFIRMED stamp slams down */
+  var best = document.getElementById('bestDoor');
+  if (hasIO){
+    var bio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){
+          setTimeout(function(){
+            best.classList.add('stamped');
+            if (best.classList.contains('open')) confettiAt(best, 34);
+          }, reduce ? 0 : 450);
+          bio.disconnect();
+        }
+      });
+    }, {threshold:.55});
+    bio.observe(best);
+  } else best.classList.add('stamped');
 
   /* activities tabs */
-  const acts = [
+  var acts = [
     {t:'Glühwein & markets', who:'Kiara, everyone', o:[
       ['Düsseldorf old-town loop (Sat)','Rathaus and the Handwerker-Markt, then along Flinger Straße. Most traditional, most stalls.'],
       ['Rhine route at dusk (Sat)','Burgplatz and a Ferris wheel ride as the lights come on, then the music-free Roncalli promenade with organic Glühwein.'],
-      ['Kö route (Sat)','Corneliusplatz rink, Kö-Bogen and Schadowstraße markets, plus the Winter Village on the Kö if it\u2019s really there.'],
+      ['Kö route (Sat)','Corneliusplatz rink, Kö-Bogen and Schadowstraße markets, plus the Winter Village on the Kö if it’s really there.'],
       ['Cologne classics (Sun)','Dom market at opening, then five minutes to Heinzels on Heumarkt and Alter Markt.']]},
     {t:'Bratwurst & hearty food', who:'Giamo, Mike', o:[
-      ['Market stalls (Sat and Sun)','Bratwurst, Reibekuchen and roasted chestnuts in Düsseldorf; Heinzels\u2019 lanes in Cologne on Sunday.'],
+      ['Market stalls (Sat and Sun)','Bratwurst, Reibekuchen and roasted chestnuts in Düsseldorf; Heinzels’ lanes in Cologne on Sunday.'],
       ['Brauhaus plates (Sat)','Schweinshaxe, Mettbrötchen or Halve Hahn with your Altbier in any Altstadt brewery.'],
-      ['Little Tokyo (Sat)','Immermannstraße\u2019s Japanese quarter for ramen: a great cheap dinner or a late-night refuel.']]},
+      ['Little Tokyo (Sat)','Immermannstraße’s Japanese quarter for ramen: a great cheap dinner or a late-night refuel.']]},
     {t:'Altbier & brauhaus', who:'Giamo, Mike', o:[
       ['Uerige','The cult one in the Altstadt, brewing its own sticky Alt. Loud, packed, perfect.'],
       ['Im Füchschen','Ratinger Straße, a brewery since 1640. Right by the THEGATE techno club.'],
@@ -515,104 +1311,356 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--line);color:var(--ink-soft
       ['LA VIE by Thomas Bühner','Top cooking, hospitality and architecture as one experience. One star.'],
       ['Nagaya or Yoshi by Nagaya','Japanese tradition meets European fine dining (Nagaya), or Japanese classics at the highest level (Yoshi). One star each.'],
       ['Jae','Modern cooking with Japanese and Korean influences. One star.'],
-      ['Agata\u2019s or Setzkasten','Part of the city\u2019s new generation of starred kitchens. Book any of these well ahead for four.']]},
+      ['Agata’s or Setzkasten','Part of the city’s new generation of starred kitchens. Book any of these well ahead for four.']]},
     {t:'Cocktails', who:'Liz, Kiara', o:[
       ['The Paris Club','Rooftop bar with skyline views. A strong start to the night.'],
-      ['Square Bar','Derendorf. David Rippen has run this 30 m\u00b2 bar for ten years; one of Falstaff\u2019s top picks.'],
+      ['Square Bar','Derendorf. David Rippen has run this 30 m² bar for ten years; one of Falstaff’s top picks.'],
       ['Venerie Bar','In the MUZE boutique hotel: 1950s style that still feels modern.'],
       ['Pardo Bar','Inside the K21 contemporary art museum. Art and drinks in one.']]},
     {t:'Nightlife', who:'Giamo, Mike', o:[
       ['Glüh Dich Glücklich','November to early January at the Kasematten on the Rhine promenade: mulled wine, house and techno, with an official afterparty in the Altstadt.'],
-      ['THEGATE','Just off Ratinger Straße, opened 2024 and rated the city\u2019s best techno club. Hosts nights like TechnoStube.'],
+      ['THEGATE','Just off Ratinger Straße, opened 2024 and rated the city’s best techno club. Hosts nights like TechnoStube.'],
       ['Cube','Long-running Altstadt club, the classic after-bar spot to dance until morning.'],
-      ['TechnoStube','Düsseldorf\u2019s hard techno series, moving between venues. Check their Instagram and ra.co for 28 Nov.'],
-      ['Warm-up','Bolker Straße and the Altstadt, the \u201clongest bar in the world\u201d.']]},
+      ['TechnoStube','Düsseldorf’s hard techno series, moving between venues. Check their Instagram and ra.co for 28 Nov.'],
+      ['Warm-up','Bolker Straße and the Altstadt, the “longest bar in the world”.']]},
     {t:'Ice skating', who:'Giamo', o:[
       ['DEG Winterwelt (Sat)','Corneliusplatz at the top of the Kö, 11:00-22:00 in 2025. 2026 prices not yet published.'],
-      ['Heinzels ice rink (Sun)','Open-air rink in Cologne\u2019s Altstadt, daily 11:00-22:00 from 23 Nov.'],
+      ['Heinzels ice rink (Sun)','Open-air rink in Cologne’s Altstadt, daily 11:00-22:00 from 23 Nov.'],
       ['Ice curling (Sun)','At Heinzels, a great team game for four with a Glühwein in hand.']]},
     {t:'Arcade & games', who:'Mike', o:[
       ['GAMESONAUT Flingern','Inside Bowling Planet (Werdener Str. 87): Pac-Man, Space Invaders and new arcade hits, with bowling under the same roof.'],
-      ['Pixel Games','Ubierstraße 18: retro arcade, multiplayer battles, VR and a \u201cfloor is lava\u201d game. Saturday 10:00-24:00.'],
+      ['Pixel Games','Ubierstraße 18: retro arcade, multiplayer battles, VR and a “floor is lava” game. Saturday 10:00-24:00.'],
       ['GAMER Düsseldorf','Klosterstraße 22: your own game show, 20 skill and knowledge games in 1-on-1 duels.'],
       ['Beerpongbar','Bolkerstraße 55 in the Altstadt: beer pong, darts, karaoke and a neon karaoke room.']]},
     {t:'Cats', who:'Liz', o:[
-      ['Heads-up','Düsseldorf\u2019s cat café (Catz Café) has closed, so Saturday has no proper option.'],
-      ['Café Schnurrke (Sun)','Cologne\u2019s long-running cat café at Ritterstraße 27, about 15 minutes\u2019 walk north of the Dom. Reservations by phone; check it\u2019s still open on Sundays.'],
+      ['Heads-up','Düsseldorf’s cat café (Catz Café) has closed, so Saturday has no proper option.'],
+      ['Café Schnurrke (Sun)','Cologne’s long-running cat café at Ritterstraße 27, about 15 minutes’ walk north of the Dom. Reservations by phone; check it’s still open on Sundays.'],
       ['The Art for Living and Mocha (Sun)','A flower shop and cat café in Cologne-Deutz, near where you might park. Call ahead.'],
       ['Little Tokyo (Sat)','Japanese shops on Immermannstraße, where cat-themed goods are easy to find.']]},
     {t:'Fashion & shopping', who:'Liz, Mike, Kiara', o:[
-      ['Königsallee','The Kö: Düsseldorf\u2019s luxury boulevard and the main event for the fashionistas.'],
+      ['Königsallee','The Kö: Düsseldorf’s luxury boulevard and the main event for the fashionistas.'],
       ['Kö-Bogen and Schadowstraße','Big flagship stores in striking new architecture, right by the markets.'],
       ['Boutiques and concept stores','Independent labels in Flingern and Unterbilk, plus Carlsplatz market for food gifts.'],
-      ['Sunday bonus','Düsseldorf has shopping Sunday on 29 Nov (13:00-18:00), but Cologne\u2019s shops stay shut. Shop on Saturday.']]},
+      ['Sunday bonus','Düsseldorf has shopping Sunday on 29 Nov (13:00-18:00), but Cologne’s shops stay shut. Shop on Saturday.']]},
     {t:'Art & museums', who:'Giamo, Kiara', o:[
       ['K20','Kunstsammlung NRW on Grabbeplatz: classic modern art, a few minutes from the Altstadt.'],
       ['K21','Contemporary art in the Ständehaus, with the Pardo Bar inside.'],
       ['Kunstpalast','Big-name exhibitions, on the Rhine in Pempelfort.'],
-      ['Museum Ludwig (Sun)','Picasso and pop art right next to Cologne\u2019s Dom, if there\u2019s time.']]},
+      ['Museum Ludwig (Sun)','Picasso and pop art right next to Cologne’s Dom, if there’s time.']]},
     {t:'Architecture & walks', who:'Giamo, Kiara', o:[
-      ['MedienHafen','Frank Gehry\u2019s twisting buildings in the old harbour. Best at blue hour.'],
-      ['Rheinturm','Düsseldorf\u2019s TV tower next to the MedienHafen, for a view over the whole city.'],
-      ['Kö-Bogen','Daniel Libeskind\u2019s building and the plant-covered Kö-Bogen II facade across the square.'],
+      ['MedienHafen','Frank Gehry’s twisting buildings in the old harbour. Best at blue hour.'],
+      ['Rheinturm','Düsseldorf’s TV tower next to the MedienHafen, for a view over the whole city.'],
+      ['Kö-Bogen','Daniel Libeskind’s building and the plant-covered Kö-Bogen II facade across the square.'],
       ['Hohenzollern Bridge (Sun)','Walk from Deutz over the love-lock bridge into Cologne for the postcard Dom view.']]}
   ];
-  const tabs = document.getElementById('tabs'), panels = document.getElementById('panels');
-  acts.forEach(function(a,i){
-    const b = document.createElement('button');
-    b.className='tab'; b.type='button'; b.role='tab'; b.id='tab'+i; b.textContent=a.t;
-    b.setAttribute('aria-controls','panel'+i); b.setAttribute('aria-selected', i===0); b.tabIndex = i===0?0:-1;
+  var tabs = document.getElementById('tabs'), panels = document.getElementById('panels');
+  function esc(s){ return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  acts.forEach(function(a, i){
+    var b = document.createElement('button');
+    b.className = 'tab'; b.type = 'button'; b.setAttribute('role', 'tab'); b.id = 'tab' + i; b.textContent = a.t;
+    b.setAttribute('aria-controls', 'panel' + i); b.setAttribute('aria-selected', String(i === 0)); b.tabIndex = i === 0 ? 0 : -1;
     tabs.appendChild(b);
-    const p = document.createElement('div');
-    p.className='panel'; p.id='panel'+i; p.setAttribute('role','tabpanel'); p.setAttribute('aria-labelledby','tab'+i); p.hidden = i!==0;
-    p.innerHTML = '<h3>'+a.t+'</h3><p class="for">Mostly for '+a.who+'</p><ul class="opts">'+
-      a.o.map(function(o,j){return '<li><span class="n">'+(j+1)+'</span><div><b>'+o[0]+'</b><span>'+o[1]+'</span></div></li>';}).join('')+'</ul>';
+    var p = document.createElement('div');
+    p.className = 'panel'; p.id = 'panel' + i; p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', 'tab' + i); p.hidden = i !== 0;
+    p.innerHTML = '<h3>' + esc(a.t) + '</h3><p class="for">Mostly for ' + esc(a.who) + '</p><ul class="opts">' +
+      a.o.map(function(o, j){ return '<li style="--i:' + j + '"><span class="n">' + (j + 1) + '</span><div><b>' + esc(o[0]) + '</b><span>' + esc(o[1]) + '</span></div></li>'; }).join('') + '</ul>';
     panels.appendChild(p);
   });
   function select(i){
-    tabs.querySelectorAll('.tab').forEach(function(t,k){ t.setAttribute('aria-selected', k===i); t.tabIndex = k===i?0:-1; });
-    panels.querySelectorAll('.panel').forEach(function(p,k){ p.hidden = k!==i; p.classList.toggle('show', k===i); });
+    Array.prototype.forEach.call(tabs.querySelectorAll('.tab'), function(t, k){ t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+    Array.prototype.forEach.call(panels.querySelectorAll('.panel'), function(p, k){ p.hidden = k !== i; p.classList.toggle('show', k === i); });
+    var t = document.getElementById('tab' + i);
+    if (tabs.scrollWidth > tabs.clientWidth){
+      tabs.scrollTo({left:t.offsetLeft - tabs.clientWidth / 2 + t.offsetWidth / 2, behavior:reduce ? 'auto' : 'smooth'});
+    }
   }
-  tabs.addEventListener('click', function(e){ const t = e.target.closest('.tab'); if (t) select(+t.id.slice(3)); });
+  tabs.addEventListener('click', function(e){ var t = e.target.closest('.tab'); if (t) select(+t.id.slice(3)); });
   tabs.addEventListener('keydown', function(e){
-    const cur = +document.activeElement.id.slice(3); let n = null;
-    if (e.key==='ArrowRight') n=(cur+1)%acts.length; if (e.key==='ArrowLeft') n=(cur-1+acts.length)%acts.length;
-    if (n!==null){ e.preventDefault(); select(n); document.getElementById('tab'+n).focus(); }
+    var cur = +document.activeElement.id.slice(3), n = null;
+    if (e.key === 'ArrowRight') n = (cur + 1) % acts.length;
+    if (e.key === 'ArrowLeft') n = (cur - 1 + acts.length) % acts.length;
+    if (e.key === 'Home') n = 0;
+    if (e.key === 'End') n = acts.length - 1;
+    if (n !== null){ e.preventDefault(); select(n); document.getElementById('tab' + n).focus(); }
   });
 
-  /* checklist memory (this browser only) */
-  document.querySelectorAll('#todo input').forEach(function(c){
-    try { c.checked = localStorage.getItem('todo-'+c.dataset.k) === '1'; } catch(e){}
-    c.addEventListener('change', function(){ try { localStorage.setItem('todo-'+c.dataset.k, c.checked?'1':'0'); } catch(e){} });
+  /* tables: label each cell so rows can stack as cards on phones */
+  Array.prototype.forEach.call(document.querySelectorAll('.tbl'), function(box){
+    var heads = Array.prototype.map.call(box.querySelectorAll('thead th'), function(th){ return th.textContent; });
+    Array.prototype.forEach.call(box.querySelectorAll('tbody tr'), function(tr){
+      Array.prototype.forEach.call(tr.children, function(td, i){ if (heads[i]) td.setAttribute('data-label', heads[i]); });
+    });
+    box.classList.add('stack');
   });
 
-  /* snowfall */
-  const cv = document.getElementById('snow'), ctx = cv.getContext('2d');
-  let flakes = [], W = 0, H = 0, raf = null;
+  /* checklist memory (this browser only) with candy-cane progress */
+  var checks = Array.prototype.slice.call(document.querySelectorAll('#todo input'));
+  var cane = document.getElementById('cane'), progTxt = document.getElementById('progTxt');
+  function progress(){
+    var done = checks.filter(function(c){ return c.checked; }).length;
+    cane.style.width = (done / checks.length * 100) + '%';
+    progTxt.textContent = done === checks.length ? 'All set. Prost!' : done + ' of ' + checks.length + ' ready';
+    return done;
+  }
+  checks.forEach(function(c){
+    try { c.checked = localStorage.getItem('todo-' + c.dataset.k) === '1'; } catch(e){}
+    c.addEventListener('change', function(){
+      try { localStorage.setItem('todo-' + c.dataset.k, c.checked ? '1' : '0'); } catch(e){}
+      var done = progress();
+      if (c.checked) confettiAt(c, done === checks.length ? 60 : 14);
+    });
+  });
+  progress();
+
+  /* countdown to departure: Sat 28 Nov 2026, 07:30 Amsterdam (CET, UTC+1) */
+  var DEPART = Date.UTC(2026, 10, 28, 6, 30, 0);
+  var HOME = Date.UTC(2026, 10, 29, 23, 0, 0);
+  var cdEls = {d:document.getElementById('cdD'), h:document.getElementById('cdH'), m:document.getElementById('cdM'), s:document.getElementById('cdS')};
+  var cdLabel = document.getElementById('cdLabel'), cdRow = document.getElementById('cdRow');
+  var last = {};
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tickCountdown(){
+    var now = Date.now(), diff = DEPART - now;
+    if (diff <= 0){
+      cdRow.hidden = true;
+      cdLabel.textContent = now < HOME ? 'We’re on the road. Prost!' : 'What a weekend. Prost!';
+      return false;
+    }
+    var s = Math.floor(diff / 1000);
+    var v = {d:Math.floor(s / 86400), h:Math.floor(s % 86400 / 3600), m:Math.floor(s % 3600 / 60), s:s % 60};
+    Object.keys(v).forEach(function(k){
+      var txt = k === 'd' ? String(v[k]) : pad(v[k]);
+      if (last[k] !== txt){
+        cdEls[k].textContent = txt;
+        if (!reduce && last[k] !== undefined && k !== 's'){
+          var box = cdEls[k].parentNode; box.classList.remove('bump'); void box.offsetWidth; box.classList.add('bump');
+        }
+        last[k] = txt;
+      }
+    });
+    return true;
+  }
+  if (tickCountdown()){
+    var cdTimer = setInterval(function(){ if (!tickCountdown()) clearInterval(cdTimer); }, 1000);
+  }
+
+  /* reveal on scroll: only content that starts below the first screen is hidden first */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.rv, .stagger'));
+  Array.prototype.forEach.call(document.querySelectorAll('.stagger'), function(s){
+    Array.prototype.forEach.call(s.children, function(c, i){ c.style.setProperty('--i', i); });
+  });
+  if (hasIO && !reduce){
+    var vh0 = innerHeight;
+    var rio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.remove('pre'); rio.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0});
+    revealEls.forEach(function(el){
+      if (!el.classList.contains('stagger')) el.classList.add('rv');
+      if (el.getBoundingClientRect().top > vh0 * 0.95){ el.classList.add('pre'); rio.observe(el); }
+    });
+  }
+
+  /* nav: mark the section in view */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  if (hasIO){
+    var nio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){
+          navLinks.forEach(function(a){ a.classList.toggle('cur', a.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    navLinks.forEach(function(a){ var s = document.querySelector(a.getAttribute('href')); if (s) nio.observe(s); });
+  }
+
+  /* characters: pop in when their section reaches the middle of the screen */
+  var active = new Set();
+  var critters = Array.prototype.slice.call(document.querySelectorAll('.critter'));
+  critters.forEach(function(c){
+    c._tilt = c.querySelector('.cr-tilt');
+    var says = (c.dataset.say || 'Prost!').split('|'), k = 0;
+    var bubble = c.querySelector('.bubble');
+    c.addEventListener('click', function(){
+      bubble.textContent = says[k++ % says.length];
+      c.classList.remove('boop'); void c.offsetWidth; c.classList.add('boop');
+      var r = c.getBoundingClientRect();
+      confetti(r.left + r.width / 2, r.top + r.height / 3, 10);
+    });
+    c.addEventListener('animationend', function(e){ if (e.animationName === 'say') c.classList.remove('boop'); });
+  });
+  if (hasIO && !reduce){
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var cs = e.target._critters;
+        cs.forEach(function(c){
+          c.classList.toggle('in', e.isIntersecting);
+          if (e.isIntersecting) active.add(c); else { active.delete(c); c._tilt.style.transform = ''; }
+        });
+      });
+    }, {rootMargin:'-22% 0px -22% 0px', threshold:0});
+    critters.forEach(function(c){
+      var s = c.parentNode;
+      if (!s._critters){ s._critters = []; cio.observe(s); }
+      s._critters.push(c);
+    });
+  } else {
+    critters.forEach(function(c){ c.classList.add('in'); });
+  }
+
+  /* pause ambient work offscreen */
+  var hero = document.getElementById('hero'), ticker = document.getElementById('ticker'), foot = document.getElementById('foot');
+  var heroVisible = true;
+  if (hasIO){
+    var pio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var off = !e.isIntersecting;
+        if (e.target === hero){ hero.classList.toggle('off', off); heroVisible = !off; if (!off) startSnow(); }
+        else if (e.target === ticker){ ticker.classList.toggle('off', off); }
+        else if (e.target === foot){ foot.classList.toggle('in', !off); }
+      });
+    }, {threshold:0});
+    pio.observe(hero); pio.observe(ticker); pio.observe(foot);
+  }
+
+  /* Alt vs Kölsch: glasses slide together as you scroll, then clink */
+  var stage = document.getElementById('stage'), stageOn = false, clinked = false;
+  function updateStage(){
+    var r = stage.getBoundingClientRect(), vh = innerHeight;
+    var center = r.top + r.height / 2;
+    var p = clamp((vh * 1.0 - center) / (vh * 0.5), 0, 1);
+    p = 1 - Math.pow(1 - p, 2);
+    stage.style.setProperty('--p', p.toFixed(3));
+    if (p >= 0.995 && !clinked){
+      clinked = true; stage.classList.add('clinked');
+      confetti(r.left + r.width / 2, r.top + r.height * 0.3, 34);
+    } else if (p < 0.6 && clinked){
+      clinked = false; stage.classList.remove('clinked');
+    }
+  }
+  if (reduce){ stage.classList.add('clinked'); }
+  else if (hasIO){
+    new IntersectionObserver(function(es){ stageOn = es[0].isIntersecting; if (stageOn) updateStage(); }, {rootMargin:'10% 0px'}).observe(stage);
+  }
+
+  /* drive: Giamo's car rolls along the route with scroll */
+  var road = document.getElementById('road'), car = document.getElementById('car');
+  var wh = [document.getElementById('wh1'), document.getElementById('wh2')];
+  var dots = Array.prototype.slice.call(road.querySelectorAll('.stopdot'));
+  var legs = Array.prototype.slice.call(document.querySelectorAll('#legs li'));
+  var routeOn = false;
+  function updateRoute(){
+    var r = road.getBoundingClientRect(), vh = innerHeight;
+    var p = reduce ? 1 : clamp((vh * 0.88 - r.top) / (vh * 0.55), 0, 1);
+    var span = road.clientWidth - car.offsetWidth * 0.6;
+    var x = p * span - car.offsetWidth * 0.2;
+    car.style.transform = 'translateX(' + x.toFixed(1) + 'px)';
+    var rot = (x / 6) * 57.3;
+    wh.forEach(function(w){ w.style.transform = 'rotate(' + rot.toFixed(0) + 'deg)'; });
+    dots.forEach(function(d, i){ d.classList.toggle('hit', p >= i / 3 - 0.02); });
+    var leg = p < 0.34 ? 0 : (p < 0.67 ? 1 : 2);
+    legs.forEach(function(l, i){ l.classList.toggle('on', !reduce && i === leg); });
+  }
+  if (hasIO){
+    new IntersectionObserver(function(es){ routeOn = es[0].isIntersecting; if (routeOn) updateRoute(); }, {rootMargin:'10% 0px'}).observe(road);
+  }
+  updateRoute();
+
+  /* one scroll loop: garland, interlude, car, and a little jelly tilt on the characters */
+  var lastY = scrollY, vel = 0, ticking = false;
+  function requestTick(){ if (!ticking){ ticking = true; requestAnimationFrame(tick); } }
+  function tick(){
+    ticking = false;
+    var y = scrollY, dy = y - lastY; lastY = y;
+    vel += (dy - vel) * 0.25;
+    lightGarland();
+    if (stageOn) updateStage();
+    if (routeOn) updateRoute();
+    if (!reduce && active.size){
+      var t = clamp(vel * 0.9, -16, 16).toFixed(2);
+      active.forEach(function(c){ c._tilt.style.transform = 'rotate(' + t + 'deg)'; });
+    }
+    if (Math.abs(vel) > 0.15) requestTick();
+    else if (vel !== 0){ vel = 0; active.forEach(function(c){ c._tilt.style.transform = ''; }); }
+  }
+  addEventListener('scroll', requestTick, {passive:true});
+
+  /* snowfall in the hero, paused when the hero is offscreen or the tab is hidden */
+  var cv = document.getElementById('snow'), ctx = cv.getContext('2d');
+  var flakes = [], W = 0, H = 0, raf = null;
   function size(){
-    const dpr = Math.min(devicePixelRatio || 1, 2);
-    W = cv.clientWidth; H = cv.clientHeight; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
-    const count = Math.round(Math.min(140, W/9));
-    flakes = Array.from({length:count}, function(){ return {x:Math.random()*W, y:Math.random()*H, r:Math.random()*2.2+.6, s:Math.random()*.6+.25, d:Math.random()*Math.PI*2}; });
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var count = Math.round(Math.min(150, W / 8));
+    flakes = Array.from({length:count}, function(){ return {x:Math.random() * W, y:Math.random() * H, r:Math.random() * 2.4 + .6, s:Math.random() * .7 + .25, d:Math.random() * Math.PI * 2}; });
+  }
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = 'rgba(255,248,240,.92)';
+    ctx.beginPath();
+    for (var i = 0; i < flakes.length; i++){
+      var f = flakes[i];
+      ctx.moveTo(f.x + f.r, f.y); ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+    }
+    ctx.fill();
   }
   function frame(){
-    ctx.clearRect(0,0,W,H);
-    const col = getComputedStyle(root).getPropertyValue('--snow').trim() || '#fff';
-    const sh = getComputedStyle(root).getPropertyValue('--snow-shadow').trim();
-    ctx.fillStyle = col; ctx.shadowColor = sh; ctx.shadowBlur = 3;
-    flakes.forEach(function(f){
-      f.d += .01; f.y += f.s; f.x += Math.sin(f.d)*.35;
-      if (f.y > H+4){ f.y = -4; f.x = Math.random()*W; }
-      ctx.beginPath(); ctx.arc(f.x,f.y,f.r,0,Math.PI*2); ctx.fill();
-    });
-    raf = requestAnimationFrame(frame);
+    for (var i = 0; i < flakes.length; i++){
+      var f = flakes[i];
+      f.d += .01; f.y += f.s; f.x += Math.sin(f.d) * .35;
+      if (f.y > H + 4){ f.y = -4; f.x = Math.random() * W; }
+    }
+    draw();
+    if (heroVisible && !document.hidden) raf = requestAnimationFrame(frame); else raf = null;
   }
-  size(); addEventListener('resize', size);
-  if (reduce){ frame(); cancelAnimationFrame(raf); }
-  else {
-    frame();
-    document.addEventListener('visibilitychange', function(){ if (document.hidden){ cancelAnimationFrame(raf); } else { raf = requestAnimationFrame(frame); } });
+  function startSnow(){ if (!reduce && raf === null && heroVisible && !document.hidden) raf = requestAnimationFrame(frame); }
+  size(); draw();
+  if (!reduce){
+    startSnow();
+    document.addEventListener('visibilitychange', function(){ if (!document.hidden) startSnow(); });
   }
+
+  /* past the hero: a lighter snowfall drifts behind the content (gold dust on cream in light mode) */
+  var cv2 = document.getElementById('snow2'), ctx2 = cv2.getContext('2d');
+  var flakes2 = [], W2 = 0, H2 = 0, raf2 = null, flakeCol = '';
+  function size2(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W2 = innerWidth; H2 = innerHeight; cv2.width = W2 * dpr; cv2.height = H2 * dpr; ctx2.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var count = Math.round(Math.min(46, W2 / 22));
+    flakes2 = Array.from({length:count}, function(){ return {x:Math.random() * W2, y:Math.random() * H2, r:Math.random() * 1.8 + .7, s:Math.random() * .5 + .2, d:Math.random() * Math.PI * 2}; });
+  }
+  function frame2(){
+    ctx2.clearRect(0, 0, W2, H2);
+    ctx2.fillStyle = flakeCol;
+    ctx2.beginPath();
+    for (var i = 0; i < flakes2.length; i++){
+      var f = flakes2[i];
+      f.d += .008; f.y += f.s; f.x += Math.sin(f.d) * .3;
+      if (f.y > H2 + 4){ f.y = -4; f.x = Math.random() * W2; }
+      ctx2.moveTo(f.x + f.r, f.y); ctx2.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+    }
+    ctx2.fill();
+    if (!heroVisible && !document.hidden) raf2 = requestAnimationFrame(frame2); else raf2 = null;
+  }
+  function syncSnow2(){
+    if (reduce) return;
+    flakeCol = isDark() ? 'rgba(255,244,232,.55)' : 'rgba(200,140,30,.38)';
+    cv2.classList.toggle('on', !heroVisible);
+    if (!heroVisible && !document.hidden && raf2 === null) raf2 = requestAnimationFrame(frame2);
+  }
+  if (!reduce){
+    size2();
+    if (hasIO) new IntersectionObserver(function(es){ heroVisible = es[0].isIntersecting; syncSnow2(); }, {threshold:0}).observe(hero);
+    document.addEventListener('visibilitychange', syncSnow2);
+    btn.addEventListener('click', function(){ setTimeout(syncSnow2, 50); });
+  }
+
+  /* layout-dependent drawings */
+  drawGarland(); drawLights();
+  var rt = null;
+  addEventListener('resize', function(){
+    clearTimeout(rt);
+    rt = setTimeout(function(){ drawGarland(); drawLights(); size(); draw(); size2(); updateRoute(); lightEls.forEach(buildLights); }, 120);
+  });
 })();
 </script>
 </body>
