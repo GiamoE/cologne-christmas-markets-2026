@@ -979,7 +979,7 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
             <li><time>13:00-14:30</time>Altbier lunch in the Altstadt: Uerige, Füchschen or Schumacher.</li>
             <li><time>14:30-17:30</time>Markets: Rathaus, Burgplatz Ferris wheel at dusk, Roncalli promenade on the Rhine. Skating at Corneliusplatz, or Mike's arcade detour.</li>
             <li><time>17:30-19:00</time>Check in and get ready.</li>
-            <li><time>19:00-21:30</time>Dinner: a starred restaurant, or ramen in Little Tokyo.</li>
+            <li><time>19:00-21:30</time>Dinner: Liz’s picks first (Yabase, Takezo or 1oder8 in the Japanese quarter), otherwise a starred restaurant or ramen in Little Tokyo.</li>
             <li><time>21:30-23:30</time>Cocktails: The Paris Club rooftop or Square Bar.</li>
             <li><time>23:30 onwards</time>Glüh Dich Glücklich at the Kasematten, then THEGATE or Cube.</li>
           </ol>
@@ -1336,6 +1336,10 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
 
   /* activities tabs */
   var acts = [
+    {t:'Liz’s food picks', who:'Liz, top of the food list', o:[
+      ['Izakaya Sushi Bar Takezo','Izakaya and sushi bar on Friedrichstraße. Takezo is best known for its ramen bar on Immermannstraße, so check the Maps pin for the right branch.','https://maps.app.goo.gl/cxsrxeQgywVP7GGS8'],
+      ['Yabase','Klosterstraße 70, in the Japanese quarter. Michelin-listed: a minimalist, upscale room behind a plain front. Open Wed-Sat for lunch and dinner, closed Sunday, so Saturday it is. No lunch reservations and people queue before opening.','https://maps.app.goo.gl/PvzJFWb3NHVvxgX69'],
+      ['1oder8','Klosterstraße 53. A Japanese tachinomi (standing) bar with an open kitchen, scored 95 in Falstaff’s 2026 Streetfood Guide. Good for a snack round before or after dinner.','https://maps.app.goo.gl/LUTH8GhJJjadxhDc9']]},
     {t:'Glühwein & markets', who:'Kiara, everyone', o:[
       ['Düsseldorf old-town loop (Sat)','Rathaus and the Handwerker-Markt, then along Flinger Straße. Most traditional, most stalls.'],
       ['Rhine route at dusk (Sat)','Burgplatz and a Ferris wheel ride as the lights come on, then the music-free Roncalli promenade with organic Glühwein.'],
@@ -1407,7 +1411,7 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
     var p = document.createElement('div');
     p.className = 'panel'; p.id = 'panel' + i; p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', 'tab' + i); p.hidden = i !== 0;
     p.innerHTML = '<h3>' + esc(a.t) + '</h3><p class="for">Mostly for ' + esc(a.who) + '</p><ul class="opts">' +
-      a.o.map(function(o, j){ return '<li style="--i:' + j + '"><span class="n">' + (j + 1) + '</span><div><b>' + esc(o[0]) + '</b><span>' + esc(o[1]) + '</span></div></li>'; }).join('') + '</ul>';
+      a.o.map(function(o, j){ return '<li style="--i:' + j + '"><span class="n">' + (j + 1) + '</span><div><b>' + (o[2] ? '<a href="' + esc(o[2]) + '" target="_blank" rel="noopener">' + esc(o[0]) + '</a>' : esc(o[0])) + '</b><span>' + esc(o[1]) + '</span></div></li>'; }).join('') + '</ul>';
     panels.appendChild(p);
   });
   function select(i){
