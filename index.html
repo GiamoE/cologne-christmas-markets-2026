@@ -112,6 +112,19 @@ small,.muted{color:var(--ink-soft)}
 .nav a:hover{color:var(--ink)}
 .nav a:hover::after,.nav a.cur::after{transform:scaleX(1)}
 .nav a.cur{color:var(--ink)}
+/* sound toggle + start hint */
+.sound{flex:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;position:relative}
+.sound svg{width:20px;height:20px}
+.sound .off{display:none}
+.sound[aria-pressed="false"] .on{display:none}
+.sound[aria-pressed="false"] .off{display:block}
+.sound.playing::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--gold-fill);opacity:0;animation:beat 1s ease-out infinite}
+@keyframes beat{0%{opacity:.7;transform:scale(.85)}100%{opacity:0;transform:scale(1.25)}}
+.hint-pill{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:.55rem;max-width:calc(100% - 32px);padding:.65rem 1.1rem;border-radius:999px;background:var(--red-fill);color:var(--on-red);font-size:.95rem;font-weight:500;box-shadow:var(--shadow);border:0;font-family:inherit;cursor:pointer;transition:opacity .4s,transform .4s}
+.hint-pill svg{width:18px;height:18px;flex:none}
+.hint-pill.gone{opacity:0;transform:translate(-50%,20px);pointer-events:none}
+@media (prefers-reduced-motion:reduce){.sound.playing::after{animation:none}}
+
 .theme{flex:none;margin-left:auto;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
 .nav + .theme{margin-left:0}
 .theme:hover{transform:rotate(25deg) scale(1.06)}
@@ -718,6 +731,10 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
     </button>
+    <button class="sound" id="soundBtn" type="button" aria-pressed="true" aria-label="Music and scroll sounds" title="Music and scroll sounds">
+      <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+      <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+    </button>
     <button class="burger" id="burgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
   </div>
   <nav class="mnav" id="mnav" aria-label="Sections">
@@ -1126,8 +1143,13 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
     </div>
     <p class="big">Prost and Kölle Alaaf!</p>
     <p>Made for Giamo, Kiara, Liz and Mike. Facts as of 10 November 2026; opening times can change, so check official sites the week before.</p>
+    <p>Music: 铃儿响叮当 (Jingle Bells), played live in your browser on a synthesized guzheng with sleigh bells.</p>
   </div>
 </footer>
+<button class="hint-pill gone" id="soundHint" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  Tap anywhere for 铃儿响叮当 and jingly scrolling
+</button>
 </div>
 
 <script>
@@ -1698,6 +1720,228 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
     clearTimeout(rt);
     rt = setTimeout(function(){ drawGarland(); drawLights(); size(); draw(); size2(); updateRoute(); lightEls.forEach(buildLights); }, 120);
   });
+})();
+</script>
+<script>
+/* Sound: 铃儿响叮当 (Jingle Bells, as every Chinese kid knows it) on a synthesized guzheng,
+   plus sleigh-bell jingles while scrolling and a pentatonic chime per section.
+   Everything is generated live with Web Audio, no audio files. */
+(function(){
+  const AC = window.AudioContext || window.webkitAudioContext;
+  const btn = document.getElementById('soundBtn');
+  const hint = document.getElementById('soundHint');
+  if (!AC){ btn.hidden = true; return; }
+
+  let enabled = true;
+  try { enabled = localStorage.getItem('sound') !== 'off'; } catch(e){}
+  btn.setAttribute('aria-pressed', enabled);
+  if (enabled) setTimeout(function(){ if (!ctx) hint.classList.remove('gone'); }, 1200);
+
+  let ctx = null, master, musicBus, sfxBus, noiseBuf, timer = null, nextT = 0, idx = 0, loopStart = 0;
+
+  function n2f(n){
+    const m = /^([A-G])(#?)(\d)$/.exec(n);
+    const semi = {C:0,D:2,E:4,F:5,G:7,A:9,B:11}[m[1]] + (m[2] ? 1 : 0);
+    const midi = (+m[3] + 1) * 12 + semi;
+    return 440 * Math.pow(2, (midi - 69) / 12);
+  }
+
+  /* ---- the song ---- */
+  const BEAT = 0.46;
+  const verse = [
+    'G4:1 E5:1 D5:1 C5:1','G4:3 G4:.5 G4:.5','G4:1 E5:1 D5:1 C5:1','A4:4',
+    'A4:1 F5:1 E5:1 D5:1','B4:4','G5:1 G5:1 F5:1 D5:1','E5:4',
+    'G4:1 E5:1 D5:1 C5:1','G4:4','G4:1 E5:1 D5:1 C5:1','A4:3 A4:1',
+    'A4:1 F5:1 E5:1 D5:1','G5:1 G5:1 G5:1 G5:1','A5:1 G5:1 F5:1 D5:1','C5:4'];
+  const chorusA = ['E5:1 E5:1 E5:2','E5:1 E5:1 E5:2','E5:1 G5:1 C5:1.5 D5:.5','E5:4'];
+  const chorus = chorusA.concat(
+    ['F5:1 F5:1 F5:1.5 F5:.5','F5:1 E5:1 E5:1 E5:.5 E5:.5','E5:1 D5:1 D5:1 E5:1','D5:2 G5:2'],
+    chorusA,
+    ['F5:1 F5:1 F5:1 F5:1','F5:1 E5:1 E5:1 E5:.5 E5:.5','G5:1 G5:1 F5:1 D5:1','C5:4']);
+  const verseCh = 'C C C F D G G C C C C F D G G C'.split(' ');
+  const chorusCh = 'C C C C F C D G C C C C F C G C'.split(' ');
+  const ROOT = {C:'C3', F:'F2', G:'G2', D:'D3'};
+
+  const events = []; let bar = 0;
+  /* intro bar: gong and a guzheng glissando */
+  events.push({t:0, k:'gong'});
+  ['C5','D5','E5','G5','A5','C6','D6','E6','G6'].forEach(function(n,i){ events.push({t:0.5 + i*0.11, k:'pluck', f:n2f(n), d:1.2, v:.32}); });
+  bar = 1;
+  function addBars(mel, ch){
+    mel.forEach(function(line, b){
+      let beat = 0; const t0 = (bar + b) * 4;
+      line.split(' ').forEach(function(tok){
+        const p = tok.split(':'), d = +p[1];
+        events.push({t:(t0 + beat) * BEAT, k:'pluck', f:n2f(p[0]), d:d * BEAT, v:.5});
+        beat += d;
+      });
+      const r = n2f(ROOT[ch[b]]);
+      events.push({t:t0 * BEAT, k:'bass', f:r, d:2 * BEAT});
+      events.push({t:(t0 + 2) * BEAT, k:'bass', f:r * 1.5, d:2 * BEAT});
+      for (let i = 0; i < 8; i++) events.push({t:(t0 + i / 2) * BEAT, k:'bell', v: i % 2 ? .05 : (i % 4 === 2 ? .14 : .08)});
+    });
+    bar += mel.length;
+  }
+  addBars(verse, verseCh);
+  addBars(chorus, chorusCh);
+  events.sort(function(a,b){ return a.t - b.t; });
+  const LOOP = bar * 4 * BEAT + BEAT * 2;
+
+  /* ---- instruments ---- */
+  function pluck(t, f, d, v, out){
+    const ring = Math.max(d + .7, 1);
+    const g = ctx.createGain(), lp = ctx.createBiquadFilter();
+    lp.type = 'lowpass'; lp.Q.value = 1.5;
+    lp.frequency.setValueAtTime(Math.min(f * 9, 9000), t);
+    lp.frequency.exponentialRampToValueAtTime(Math.max(f * 2, 600), t + ring * .7);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(v, t + .006);
+    g.gain.exponentialRampToValueAtTime(v * .35, t + .25);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + ring);
+    [['triangle', 1, 1], ['sawtooth', 1.003, .35], ['sine', 2, .25]].forEach(function(o){
+      const osc = ctx.createOscillator(), og = ctx.createGain();
+      osc.type = o[0]; og.gain.value = o[2];
+      const ff = f * o[1];
+      osc.frequency.setValueAtTime(ff * .985, t);           /* guzheng-style slide into the note */
+      osc.frequency.exponentialRampToValueAtTime(ff, t + .045);
+      if (d >= BEAT * 1.9){                                    /* 吟 vibrato on long notes */
+        const lfo = ctx.createOscillator(), lg = ctx.createGain();
+        lfo.frequency.value = 5.2; lg.gain.setValueAtTime(0, t); lg.gain.linearRampToValueAtTime(ff * .008, t + .45);
+        lfo.connect(lg); lg.connect(osc.frequency); lfo.start(t); lfo.stop(t + ring);
+      }
+      osc.connect(og); og.connect(lp); osc.start(t); osc.stop(t + ring + .05);
+    });
+    lp.connect(g); g.connect(out);
+  }
+  function bass(t, f, d){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine'; o.frequency.value = f;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(.22, t + .02); g.gain.exponentialRampToValueAtTime(0.0001, t + d + .2);
+    o.connect(g); g.connect(musicBus); o.start(t); o.stop(t + d + .25);
+  }
+  function noiseHit(t, v, freq, len, out){
+    const s = ctx.createBufferSource(), bp = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = noiseBuf; bp.type = 'bandpass'; bp.frequency.value = freq; bp.Q.value = 2.5;
+    g.gain.setValueAtTime(v, t); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+    s.connect(bp); bp.connect(g); g.connect(out); s.start(t, Math.random()); s.stop(t + len + .02);
+  }
+  function ping(t, f, v, len, out){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine'; o.frequency.value = f;
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v, t + .003); g.gain.exponentialRampToValueAtTime(0.0001, t + len);
+    o.connect(g); g.connect(out); o.start(t); o.stop(t + len + .02);
+  }
+  function sleighBell(t, v, out){
+    noiseHit(t, v, 7000 + Math.random() * 2500, .09, out);
+    ping(t, 3800 + Math.random() * 1600, v * .35, .12, out);
+  }
+  function gong(t){
+    [[98, .22, 3.5], [148, .1, 2.6], [231, .07, 2], [347, .04, 1.4]].forEach(function(p){
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = 'sine'; o.frequency.setValueAtTime(p[0] * 1.02, t); o.frequency.exponentialRampToValueAtTime(p[0], t + .8);
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(p[1], t + .06); g.gain.exponentialRampToValueAtTime(0.0001, t + p[2]);
+      o.connect(g); g.connect(musicBus); o.start(t); o.stop(t + p[2] + .05);
+    });
+  }
+  function chime(t, f, out){
+    [[1, .16, 1.6], [2.76, .05, .8], [5.4, .025, .4]].forEach(function(p){ ping(t, f * p[0], p[1], p[2], out); });
+  }
+
+  /* ---- scheduler ---- */
+  function schedule(){
+    while (true){
+      const e = events[idx], at = loopStart + e.t;
+      if (at > ctx.currentTime + .25) break;
+      if (at >= ctx.currentTime - .05){
+        if (e.k === 'pluck') pluck(at, e.f, e.d, e.v, musicBus);
+        else if (e.k === 'bass') bass(at, e.f, e.d);
+        else if (e.k === 'bell') sleighBell(at, e.v, musicBus);
+        else if (e.k === 'gong') gong(at);
+      }
+      idx++;
+      if (idx >= events.length){ idx = 0; loopStart += LOOP; }
+    }
+  }
+  function startMusic(){
+    if (timer) return;
+    idx = 0; loopStart = ctx.currentTime + .1;
+    musicBus.gain.cancelScheduledValues(ctx.currentTime);
+    musicBus.gain.setValueAtTime(.0001, ctx.currentTime); musicBus.gain.exponentialRampToValueAtTime(.55, ctx.currentTime + .6);
+    schedule(); timer = setInterval(schedule, 40);
+    btn.classList.add('playing');
+  }
+  function stopMusic(){
+    if (!timer) return;
+    clearInterval(timer); timer = null;
+    musicBus.gain.cancelScheduledValues(ctx.currentTime);
+    musicBus.gain.setValueAtTime(musicBus.gain.value, ctx.currentTime); musicBus.gain.linearRampToValueAtTime(0, ctx.currentTime + .3);
+    btn.classList.remove('playing');
+  }
+
+  function init(){
+    ctx = new AC();
+    const comp = ctx.createDynamicsCompressor();
+    master = ctx.createGain(); master.gain.value = .8;
+    musicBus = ctx.createGain(); musicBus.gain.value = 0;
+    sfxBus = ctx.createGain(); sfxBus.gain.value = .7;
+    musicBus.connect(master); sfxBus.connect(master); master.connect(comp); comp.connect(ctx.destination);
+    noiseBuf = ctx.createBuffer(1, ctx.sampleRate * 2, ctx.sampleRate);
+    const ch = noiseBuf.getChannelData(0); for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+  }
+  function unlock(){
+    hint.classList.add('gone');
+    if (!enabled) return;
+    if (!ctx) init();
+    if (ctx.state === 'suspended') ctx.resume();
+    startMusic();
+  }
+  function firstGesture(e){
+    if (e.target.closest && e.target.closest('#soundBtn')) return; /* the button handles itself */
+    ['pointerdown','keydown','touchend'].forEach(function(n){ removeEventListener(n, firstGesture, true); });
+    unlock();
+  }
+  ['pointerdown','keydown','touchend'].forEach(function(n){ addEventListener(n, firstGesture, true); });
+  hint.addEventListener('click', unlock);
+
+  btn.addEventListener('click', function(){
+    enabled = !enabled;
+    btn.setAttribute('aria-pressed', enabled);
+    try { localStorage.setItem('sound', enabled ? 'on' : 'off'); } catch(e){}
+    if (enabled) unlock();
+    else { hint.classList.add('gone'); if (ctx) stopMusic(); }
+  });
+
+  document.addEventListener('visibilitychange', function(){
+    if (!ctx) return;
+    if (document.hidden) ctx.suspend(); else if (enabled) ctx.resume();
+  });
+
+  /* ---- scroll: sleigh-bell jingles ---- */
+  let lastY = scrollY, acc = 0, lastJ = 0;
+  addEventListener('scroll', function(){
+    const y = scrollY, dy = Math.abs(y - lastY); lastY = y;
+    if (!ctx || !enabled || ctx.state !== 'running') return;
+    acc += dy;
+    const now = performance.now();
+    if (acc > 90 && now - lastJ > 150){
+      const hits = Math.min(6, 2 + Math.floor(acc / 120)), t = ctx.currentTime;
+      for (let i = 0; i < hits; i++) sleighBell(t + i * (.025 + Math.random() * .03), .12 + Math.random() * .08, sfxBus);
+      acc = 0; lastJ = now;
+    }
+  }, {passive:true});
+
+  /* ---- each section rings its own pentatonic chime (宫 商 角 徵 羽) ---- */
+  const PENTA = ['C6','D6','E6','G6','A6','C7','D7','E7'].map(n2f);
+  const secs = Array.from(document.querySelectorAll('main section'));
+  let lastChime = 0;
+  const sio = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting || !ctx || !enabled || ctx.state !== 'running') return;
+      const now = performance.now(); if (now - lastChime < 400) return; lastChime = now;
+      chime(ctx.currentTime + .02, PENTA[secs.indexOf(e.target) % PENTA.length], sfxBus);
+    });
+  }, {threshold:.3});
+  secs.forEach(function(s){ sio.observe(s); });
 })();
 </script>
 </body>
