@@ -128,6 +128,24 @@ small,.muted{color:var(--ink-soft)}
 .garland .bulb.on.r{fill:var(--red-fill);filter:drop-shadow(0 0 4px var(--red-fill))}
 .garland .bulb.on.g{fill:#2FA36B;filter:drop-shadow(0 0 4px #2FA36B)}
 @media (max-width:860px){.nav{display:none}}
+/* ===== mobile menu ===== */
+.burger{display:none;flex:none;width:42px;height:42px;border-radius:50%;border:0;background:var(--red-fill);color:var(--on-red);place-items:center;cursor:pointer;box-shadow:0 6px 16px -8px var(--red-fill)}
+.burger span{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;grid-area:1/1;transition:transform .35s cubic-bezier(.3,1.4,.5,1),opacity .2s}
+.burger span:nth-child(1){transform:translateY(-6px)}
+.burger span:nth-child(3){transform:translateY(6px)}
+.burger[aria-expanded="true"] span:nth-child(1){transform:rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger[aria-expanded="true"] span:nth-child(3){transform:rotate(-45deg)}
+.mnav{position:absolute;left:0;right:0;top:100%;padding:.9rem 16px 1.2rem;background:var(--surface);border-bottom:3px solid var(--red-fill);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:.5rem;transform-origin:top;transform:scaleY(.6) translateY(-12px);opacity:0;visibility:hidden;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s,visibility 0s .35s}
+.mnav.open{transform:none;opacity:1;visibility:visible;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s,visibility 0s}
+.mnav a{display:flex;align-items:center;gap:.55rem;min-height:48px;padding:.6rem .85rem;border-radius:14px;background:var(--surface-2);color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem;opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s,background .2s}
+.mnav.open a{opacity:1;transform:none}
+.mnav.open a:nth-child(2){transition-delay:.03s}.mnav.open a:nth-child(3){transition-delay:.06s}.mnav.open a:nth-child(4){transition-delay:.09s}.mnav.open a:nth-child(5){transition-delay:.12s}.mnav.open a:nth-child(6){transition-delay:.15s}.mnav.open a:nth-child(7){transition-delay:.18s}.mnav.open a:nth-child(8){transition-delay:.21s}
+.mnav a .e{font-size:1.15rem;line-height:1}
+.mnav a.cur{background:var(--red-fill);color:var(--on-red)}
+@media (max-width:860px){.burger{display:grid}.bar .theme{margin-left:auto}}
+@media (min-width:861px){.mnav{display:none}}
+@media (prefers-reduced-motion:reduce){.mnav,.mnav a,.burger span{transition:none!important}}
 
 /* ===== hero ===== */
 .hero{position:relative;overflow:hidden;padding:0;color:var(--on-red);background:radial-gradient(120% 80% at 50% 30%,var(--hero-a),var(--hero-b) 75%)}
@@ -700,7 +718,11 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
     </button>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Sections">
+    <a href="#crew"><span class="e" aria-hidden="true">🎅</span>Crew</a><a href="#weekend"><span class="e" aria-hidden="true">📅</span>Weekend</a><a href="#markets"><span class="e" aria-hidden="true">🎄</span>Markets</a><a href="#do"><span class="e" aria-hidden="true">🍷</span>Things to do</a><a href="#plan"><span class="e" aria-hidden="true">🗺️</span>Plan</a><a href="#stay"><span class="e" aria-hidden="true">🏠</span>Stay</a><a href="#drive"><span class="e" aria-hidden="true">🚗</span>Drive</a><a href="#check"><span class="e" aria-hidden="true">✅</span>Fact check</a>
+  </nav>
   <div class="garland" aria-hidden="true"><svg id="garland" preserveAspectRatio="none"></svg></div>
 </header>
 
@@ -1461,7 +1483,22 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
   }
 
   /* nav: mark the section in view */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a, .mnav a'));
+  /* mobile menu */
+  (function(){
+    var bb = document.getElementById('burgerBtn'), mn = document.getElementById('mnav');
+    if (!bb || !mn) return;
+    function setOpen(o){
+      mn.classList.toggle('open', o);
+      bb.setAttribute('aria-expanded', o);
+      bb.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+    }
+    bb.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!mn.classList.contains('open')); });
+    mn.addEventListener('click', function(e){ if (e.target.closest('a')) setOpen(false); });
+    document.addEventListener('click', function(e){ if (mn.classList.contains('open') && !mn.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && mn.classList.contains('open')){ setOpen(false); bb.focus(); } });
+    addEventListener('resize', function(){ if (innerWidth > 860) setOpen(false); });
+  })();
   if (hasIO){
     var nio = new IntersectionObserver(function(es){
       es.forEach(function(e){
