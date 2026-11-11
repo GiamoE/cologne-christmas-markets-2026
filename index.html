@@ -1148,7 +1148,7 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
 </footer>
 <button class="hint-pill gone" id="soundHint" type="button">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
-  Tap anywhere for 铃儿响叮当 and jingly scrolling
+  Turn on 铃儿响叮当 and jingly scrolling
 </button>
 </div>
 
@@ -1732,10 +1732,14 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
   const hint = document.getElementById('soundHint');
   if (!AC){ btn.hidden = true; return; }
 
-  let enabled = true;
-  try { enabled = localStorage.getItem('sound') !== 'off'; } catch(e){}
+  /* opt-in: sound stays off unless the viewer turned it on (remembered per browser) */
+  let enabled = false;
+  try { enabled = localStorage.getItem('sound') === 'on'; } catch(e){}
   btn.setAttribute('aria-pressed', enabled);
-  if (enabled) setTimeout(function(){ if (!ctx) hint.classList.remove('gone'); }, 1200);
+  if (!enabled){
+    setTimeout(function(){ if (!enabled) hint.classList.remove('gone'); }, 1500);
+    setTimeout(function(){ hint.classList.add('gone'); }, 12000);
+  }
 
   let ctx = null, master, musicBus, sfxBus, noiseBuf, timer = null, nextT = 0, idx = 0, loopStart = 0;
 
@@ -1900,16 +1904,18 @@ html.js .crew.stagger > *{transition-property:opacity,transform}
     ['pointerdown','keydown','touchend'].forEach(function(n){ removeEventListener(n, firstGesture, true); });
     unlock();
   }
-  ['pointerdown','keydown','touchend'].forEach(function(n){ addEventListener(n, firstGesture, true); });
-  hint.addEventListener('click', unlock);
+  /* only someone who already opted in gets music back on their first tap */
+  if (enabled) ['pointerdown','keydown','touchend'].forEach(function(n){ addEventListener(n, firstGesture, true); });
 
-  btn.addEventListener('click', function(){
+  function toggle(){
     enabled = !enabled;
     btn.setAttribute('aria-pressed', enabled);
     try { localStorage.setItem('sound', enabled ? 'on' : 'off'); } catch(e){}
     if (enabled) unlock();
     else { hint.classList.add('gone'); if (ctx) stopMusic(); }
-  });
+  }
+  btn.addEventListener('click', toggle);
+  hint.addEventListener('click', function(){ if (!enabled) toggle(); });
 
   document.addEventListener('visibilitychange', function(){
     if (!ctx) return;
